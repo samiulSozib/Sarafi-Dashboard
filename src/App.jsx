@@ -25,7 +25,8 @@ export default function App() {
         <Routes>
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
-            <Route index path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+            {/* <Route index path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
+            <Route index path="/" element={<Home />} />
             
 
             {/* Others Page */}
