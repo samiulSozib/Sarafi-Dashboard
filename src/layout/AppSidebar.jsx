@@ -51,7 +51,11 @@ const AppSidebar = () => {
       icon: <SideNavUser />,
       name: "SIDEBAR.CUSTOMER",
       subItems: [
-        { name: "COUNTRY", path: "/location/countries" },
+        { name: "SIDEBAR.PERMANENT_CUSTOMERS", path: "/customer/permanent-customers" },
+        { name: "SIDEBAR.TEMPORARY_CUSTOMERS", path: "/customer/temporary-customers" },
+        { name: "SIDEBAR.CORPORATE_CUSTOMERS", path: "/customer/corporate-customers" },
+        { name: "SIDEBAR.CUSTOMER_DEPOSIT_ACCOUNT", path: "/customer/customer-deposit-account" },
+
       ],
     },
     {

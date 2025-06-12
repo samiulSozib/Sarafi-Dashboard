@@ -16,6 +16,7 @@ import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import { Customers } from "./pages/Customers/Customers";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route element={<AppLayout />}>
             {/* <Route index path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
             <Route index path="/" element={<Home />} />
+            <Route index path="/customer/:customerType" element={<Customers/>}/>
             
 
             {/* Others Page */}

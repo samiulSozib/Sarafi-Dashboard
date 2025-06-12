@@ -1,7 +1,7 @@
 const Button = ({
   children,
   size = "md",
-  variant = "primary",
+  variant = "",
   startIcon,
   endIcon,
   onClick,

@@ -75,6 +75,8 @@ import  {ReactComponent as Home} from './home-4-svgrepo-com.svg?react'
 import {ReactComponent as View} from './view-disable-svgrepo-com.svg?react'
 import {ReactComponent as FunnelIcon} from './funnel.svg?react'
 import {ReactComponent as SearchIcon} from './search-svgrepo-com.svg?react'
+import {ReactComponent as BlueSignal} from './blueSignal.svg?react'
+import {ReactComponent as GreenSignal} from './greenSignal.svg?react'
 
 import {ReactComponent as Direction} from './sidebarIcon/Direction.svg?react'
 import {ReactComponent as Station} from './sidebarIcon/Station.svg?react'
@@ -102,6 +104,8 @@ import {ReactComponent as SideNavUser} from './sidenav/user.svg?react'
 
 
 export {
+  GreenSignal,
+  BlueSignal,
   SideNavDashboard,
   SideNavAsset,
   SideNavFinance,

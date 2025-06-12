@@ -175,7 +175,7 @@ export function formatToYMD(datetime) {
 
 
 // src/utils/language.js
-export const isRtl = (language) => {
+export const checkRtl = (language) => {
   const rtlLanguages = ['ar', 'fa', 'ps', 'he', 'ur']; // Add more RTL languages as needed
   return rtlLanguages.includes(language);
 };
