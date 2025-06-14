@@ -3,16 +3,59 @@
   "SIDEBAR.CUSTOMER": "Customer",
   "SIDEBAR.PERMANENT_CUSTOMERS": "Permanent Customers",
   "SIDEBAR.TEMPORARY_CUSTOMERS": "Temporary Customers",
-  "SIDEBAR.CORPORATE_CUSTOMERS": "Corporate Customer",
+  "SIDEBAR.CORPORATE_CUSTOMERS": "Corporate Customers",
   "SIDEBAR.CUSTOMER_DEPOSIT_ACCOUNT": "Customer Deposit Account",
+  
   "SIDEBAR.FINANCIAL_SERVICES": "Financial Services",
+  "SIDEBAR.CURRENCY_CONVERSION": "Currency Conversion",
+  "SIDEBAR.SEND_CURRENCY": "Send Currency",
+  "SIDEBAR.RECEIVE_CURRENCY": "Receive Currency",
+  "SIDEBAR.ACCOUNT_TO_ACCOUNT_TRANSFER": "Account-to-Account Transfer",
+  "SIDEBAR.DEPOSIT_TO_SAVINGS": "Deposit Currency to Savings Account",
+  "SIDEBAR.CUSTOMER_TRANSACTION_HISTORY": "Customer Transaction History",
+
   "SIDEBAR.REPORTS": "Reports",
+  "SIDEBAR.EXCHANGE_FINANCIAL_STATUS": "Exchange Financial Status",
+  "SIDEBAR.BRANCH_INDICATOR_REPORT": "Branch Indicator Report",
+  "SIDEBAR.PROFIT_AND_LOSS": "Profit & Loss",
+  "SIDEBAR.CURRENCY_EXCHANGE_REPORT": "Currency Exchange Report",
+  "SIDEBAR.CURRENCY_SENDING_REPORT": "Currency Sending Report",
+  "SIDEBAR.DELETED_TRANSACTIONS": "Deleted Transactions",
+  "SIDEBAR.TOTAL_TRANSFERS_REPORT": "Total Transfers Report",
+
   "SIDEBAR.HUMAN_RESOURCES": "Human Resources",
+  "SIDEBAR.EMPLOYEES": "Employees",
+  "SIDEBAR.SHAREHOLDERS": "Shareholders",
+  "SIDEBAR.ORGANIZATIONAL_STRUCTURE": "Organizational Structure",
+
   "SIDEBAR.ASSETS": "Assets",
+  "SIDEBAR.BRANCH_CAPITAL": "Branch Capital",
+  "SIDEBAR.BANK_CAPITAL": "Bank Capital",
+  "SIDEBAR.EXPENSES": "Expenses",
+  "SIDEBAR.OTHER_ITEMS": "Other Items",
+
   "SIDEBAR.SPECIAL_TRANSACTIONS": "Special Transactions",
+  "SIDEBAR.LARGE_CASH_TRANSACTIONS": "Large Cash Transactions",
+  "SIDEBAR.INDIVIDUAL_LARGE_CASH": "Individual",
+  "SIDEBAR.REPEATED_LARGE_CASH": "Repeated",
+  "SIDEBAR.BORDER_PROVINCES": "Border Provinces",
+
+  "SIDEBAR.SUSPICIOUS_TRANSACTIONS": "Suspicious Transactions",
+  "SIDEBAR.LARGE_SUSPICIOUS_CASH": "Large Suspicious Cash Transactions",
+  "SIDEBAR.INDIVIDUAL_SUSPICIOUS": "Individual",
+
   "SIDEBAR.LIABILITIES_AND_PAYMENTS": "Liabilities and Payments",
-  "SIDEBAR.SANCTIONS_LIST_RECONCILIATION": "Sanctions List Reconciliation",
+  "SIDEBAR.SANCTIONS_LIST_COMPLIANCE": "Sanctions List Compliance",
+
   "SIDEBAR.SETTINGS": "Settings",
+  "SIDEBAR.SYSTEM_ACCOUNT": "System Account",
+  "SIDEBAR.BRANCH": "Branch",
+  "SIDEBAR.USER": "User",
+  "SIDEBAR.SYSTEM_INFORMATION": "System Information",
+  "SIDEBAR.BIOMETRIC": "Biometric",
+  "SIDEBAR.BACKUP_SYSTEM_DATA": "Backup System Data",
+  "SIDEBAR.CURRENCY": "Currency",
+  
   "HOME": {
     "CURRENCY_EXCHANGE": "Currency Exchange",
     "TRANSFER_CURRENCY": "Transfer Currency",
@@ -23,6 +66,7 @@
     "CURRENCY_EXCHANGE_RATES": "Currency Exchange Rates",
     "ADD_NEW_CURRENCY": "Add New Currency",
     "FINANCIAL_SUMMARY": "Financial Summary",
+    
     "TOTAL_CONTRACTS": "Total contracts",
     "TOTAL_AGENCIES": "Total Agencies",
     "TEMPORARY_CUSTOMERS": "Temporary Customers",
@@ -38,6 +82,7 @@
     "EXCHANGE_BALANCE": "Exchange Balance",
     "FINANCE_GROWTH": "Finance Growth",
     "ACCOUNT_SUMMARY": "Account Summary",
+    
     "LOSS(RED)": "Loss (Red)",
     "PROFIT(GREEN)": "Profit (Green)",
     "INCOME(YELLOW)": "Income (Yellow)",
@@ -54,7 +99,8 @@
     "NOVEMBER": "November",
     "DECEMBER": "December",
     "CUSTOMER_WITHDRAWALS": "Customer Withdrawals",
-    "CUSTOMER_DEPOSIT": "Customer Deposits"
+    "CUSTOMER_DEPOSIT": "Customer Deposits",
+    "RECENT_CUSTOMER_TRANSACTION":"Recent Customer Transaction"
   },
   "CUSTOMER": {
     "ADD_NEW_CUSTOMER": "Add New Customer",
@@ -85,12 +131,24 @@
     "LICENSE_EXPIRY_DATE": "License Expiry Date",
     "FULL_ADDRESS": "Full Address",
     "DELETE_CUSTOMER": "Delete Customer",
-    "EDIT_CUSTOMER": "Edit Customer"
+    "EDIT_CUSTOMER": "Edit Customer",
+    "ACCOUNT_INFORMATION":"Account Information",
+    "CUSTOMER_NAME":"Customer Name",
+    "ACCOUNT_NUMBER":"Account Number",
+    "CUSTOMER":"Customer",
+    "ID_TYPE":"ID Type",
+    "ID_NUMBER":"ID Number",
+    "JOINED":"Joined",
+    "EDIT_INFORMATION":"Edit Information",
+    "DOWNLOAD_EXCEL_FILE":"Download Excel File",
+    "PRINT":"Print",
+    "TRANSACTION":"Transaction"
   },
   "COMMON": {
     "TOTAL": "Total",
     "AMOUNT": "Amount",
     "CONFIRM_AND_SAVE": "Confirm & Save",
+    "CONFIRM_AND_VIEW": "Confirm & View",
     "BACK": "Back",
     "SELECT": "Select",
     "INFORMATION_WAS_SUCCESSFULLY_RECORDED": "Information was successfully recorded.",

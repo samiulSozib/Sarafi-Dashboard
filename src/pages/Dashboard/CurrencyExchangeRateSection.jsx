@@ -8,11 +8,12 @@ export const CurrencyExchangeRateSection = () => {
     <div className="col-span-12 bg-[#e9f3fa] mt-2 p-3 rounded-md">
       <div className="flex flex-row justify-between mb-3">
         <div className="flex flex-row items-center gap-x-2">
+          <GreenSignal className="w-9 h-9" />
           <span>{t("HOME.CURRENCY_EXCHANGE_RATES")}</span>
-          <GreenSignal className="w-9 h-9"/>
         </div>
 
         <Button
+          className="bg-[#1E00A3] text-white"
           startIcon={
             <svg
               width="19"

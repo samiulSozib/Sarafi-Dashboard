@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import {
   Table,
@@ -31,9 +31,12 @@ import {
   MenuList,
 } from "@material-tailwind/react";
 import { CiMenuKebab } from "react-icons/ci";
-import DeleteAlert from "../../components/sweetalert/DeleteAlert";
+import DeleteAlert from "./sweetalert/DeleteAlert";
+import { CustomerDepositInfoDialog } from "./CustomerDepositInfoDialog";
+import { CustomerDepositInfo } from "./CustomerDepositInfo";
 
 export const CustomerList = () => {
+  const navigate = useNavigate();
   const { customerType } = useParams();
   const { t, i18n } = useTranslation();
   const isRTL = checkRtl(i18n.language);
@@ -41,7 +44,20 @@ export const CustomerList = () => {
     useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
-  const [confirmationDelete,setConfirmationDelete]=useState(false)
+  const [confirmationDelete, setConfirmationDelete] = useState(false);
+  // State for deposit info flow
+  const [showDepositDialog, setShowDepositDialog] = useState(false);
+  const [depositVerified, setDepositVerified] = useState(false);
+
+  // Check if this is a deposit info route
+  const isDepositInfoRoute = customerType === "customer-deposit-account";
+
+  useEffect(() => {
+    if (isDepositInfoRoute && !depositVerified) {
+      setShowDepositDialog(true);
+    }
+  }, [isDepositInfoRoute, depositVerified]);
+
   const tableData = [
     {
       id: 1,
@@ -146,7 +162,11 @@ export const CustomerList = () => {
         return (
           <AddEditPermanentCustomerDialog
             isOpen={isAddEditCustomerDialogOpen}
-            onClose={() => {setIsAddEditCustomerDialogOpen(false),setIsEditing(false),setIsShowing(false)}}
+            onClose={() => {
+              setIsAddEditCustomerDialogOpen(false),
+                setIsEditing(false),
+                setIsShowing(false);
+            }}
             isEditing={isEditing}
             isShowing={isShowing}
           />
@@ -155,7 +175,11 @@ export const CustomerList = () => {
         return (
           <AddEditTemporaryCustomerDialog
             isOpen={isAddEditCustomerDialogOpen}
-            onClose={() => {setIsAddEditCustomerDialogOpen(false),setIsEditing(false),setIsShowing(false)}}
+            onClose={() => {
+              setIsAddEditCustomerDialogOpen(false),
+                setIsEditing(false),
+                setIsShowing(false);
+            }}
             isEditing={isEditing}
             isShowing={isShowing}
           />
@@ -165,7 +189,11 @@ export const CustomerList = () => {
         return (
           <AddEditCorporateCustomerDialog
             isOpen={isAddEditCustomerDialogOpen}
-            onClose={() => {setIsAddEditCustomerDialogOpen(false),setIsEditing(false),setIsShowing(false)}}
+            onClose={() => {
+              setIsAddEditCustomerDialogOpen(false),
+                setIsEditing(false),
+                setIsShowing(false);
+            }}
             isEditing={isEditing}
             isShowing={isShowing}
           />
@@ -176,12 +204,40 @@ export const CustomerList = () => {
     }
   };
 
-  const handleDelete=()=>{
-    setConfirmationDelete(true)
+  const handleDelete = () => {
+    setConfirmationDelete(true);
+  };
+
+  const handleDepositVerify = () => {
+    setDepositVerified(true);
+    setShowDepositDialog(false);
+    // You could also perform API verification here
+  };
+
+  const handleChangeAccount = () => {
+    setDepositVerified(false);
+    setShowDepositDialog(true);
+  };
+
+  if (isDepositInfoRoute) {
+    return (
+      <>
+        {showDepositDialog && (
+          <CustomerDepositInfoDialog
+            onVerify={handleDepositVerify}
+            onClose={() => navigate(-1)} // Go back
+          />
+        )}
+
+        {depositVerified && (
+          <CustomerDepositInfo onChangeAccount={handleChangeAccount} />
+        )}
+      </>
+    );
   }
 
   return (
-    <div className='overflow-hidden rounded-2xl border border-gray-200 bg-white px-4 pb-3 pt-4 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6"'>
+    <div className='overflow-hidden pb-3 pt-4 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6"'>
       <div className="flex flex-row justify-end mb-3">
         <Button
           onClick={() => setIsAddEditCustomerDialogOpen(true)}
@@ -207,18 +263,64 @@ export const CustomerList = () => {
         </Button>
       </div>
 
-      <div className="flex flex-row gap-2 items-center bg-[#F4F6F8] mt-2 p-2">
-        <span className="font-semibold">{renderCustomerTitle()}</span>
-        <BlueSignal className="w-5 h-5" />
-      </div>
+      <div className="border rounded-lg">
+        <div className="flex flex-row gap-2 items-center bg-[#F4F6F8] p-4 rounded-md py-4">
+          <BlueSignal className="w-5 h-5" />
+          <span className="font-semibold text-[18px] leading-8">{renderCustomerTitle()}</span>
+        </div>
 
-      <div className="col-span-12 grid grid-cols-12 gap-3 md:gap-6 p-2 mb-2">
-        <div className="col-span-12 md:col-span-4">
+        <div className="bg-white col-span-12 grid grid-cols-12 gap-3 md:gap-6 p-2 mb-2">
+          <div className="col-span-12 md:col-span-4">
+            <div className="col-span-12 md:col-span-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search By name..."
+                  className="w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  dir={isRTL ? "rtl" : "ltr"}
+                  style={{
+                    paddingLeft: isRTL ? "2.5rem" : "1rem",
+                    paddingRight: isRTL ? "1rem" : "2.5rem",
+                    textAlign: isRTL ? "right" : "left",
+                  }}
+                />
+                <div
+                  className={`absolute inset-y-0 ${
+                    isRTL ? "left-0 pl-3" : "right-0 pr-3"
+                  } flex items-center pointer-events-none`}
+                >
+                  <SearchIcon className="w-5 h-5 text-gray-400" />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-span-12 md:col-span-4">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search By name..."
+                placeholder="Search By ID Document Number..."
+                className="w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                dir={isRTL ? "rtl" : "ltr"}
+                style={{
+                  paddingLeft: isRTL ? "2.5rem" : "1rem",
+                  paddingRight: isRTL ? "1rem" : "2.5rem",
+                  textAlign: isRTL ? "right" : "left",
+                }}
+              />
+              <div
+                className={`absolute inset-y-0 ${
+                  isRTL ? "left-0 pl-3" : "right-0 pr-3"
+                } flex items-center pointer-events-none`}
+              >
+                <SearchIcon className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search By ID Phone Number..."
                 className="w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 dir={isRTL ? "rtl" : "ltr"}
                 style={{
@@ -237,183 +339,142 @@ export const CustomerList = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-12 md:col-span-4">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search By ID Document Number..."
-              className="w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              dir={isRTL ? "rtl" : "ltr"}
-              style={{
-                paddingLeft: isRTL ? "2.5rem" : "1rem",
-                paddingRight: isRTL ? "1rem" : "2.5rem",
-                textAlign: isRTL ? "right" : "left",
-              }}
-            />
-            <div
-              className={`absolute inset-y-0 ${
-                isRTL ? "left-0 pl-3" : "right-0 pr-3"
-              } flex items-center pointer-events-none`}
-            >
-              <SearchIcon className="w-5 h-5 text-gray-400" />
-            </div>
-          </div>
-        </div>
-        <div className="col-span-12 md:col-span-4">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search By ID Phone Number..."
-              className="w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              dir={isRTL ? "rtl" : "ltr"}
-              style={{
-                paddingLeft: isRTL ? "2.5rem" : "1rem",
-                paddingRight: isRTL ? "1rem" : "2.5rem",
-                textAlign: isRTL ? "right" : "left",
-              }}
-            />
-            <div
-              className={`absolute inset-y-0 ${
-                isRTL ? "left-0 pl-3" : "right-0 pr-3"
-              } flex items-center pointer-events-none`}
-            >
-              <SearchIcon className="w-5 h-5 text-gray-400" />
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="max-w-full overflow-x-auto">
-        <Table>
-          {/* Table Header */}
-          <TableHeader className="bg-[#F4F6F8] border-b border-gray-100 dark:border-white/[0.05]">
-            <TableRow>
-              <TableCell
-                isHeader
-                className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                User
-              </TableCell>
-              <TableCell
-                isHeader
-                className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Project Name
-              </TableCell>
-
-              <TableCell
-                isHeader
-                className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Status
-              </TableCell>
-              <TableCell
-                isHeader
-                className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Budget
-              </TableCell>
-              <TableCell
-                isHeader
-                className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-              >
-                Actions
-              </TableCell>
-            </TableRow>
-          </TableHeader>
-
-          {/* Table Body */}
-          <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
-            {tableData.map((order) => (
-              <TableRow key={order.id}>
-                <TableCell className="px-5 py-4 sm:px-6 text-start">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 overflow-hidden rounded-full">
-                      <img
-                        width={40}
-                        height={40}
-                        src={order.user.image}
-                        alt={order.user.name}
-                      />
-                    </div>
-                    <div>
-                      <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
-                        {order.user.name}
-                      </span>
-                      <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-                        {order.user.role}
-                      </span>
-                    </div>
-                  </div>
+        <div className="max-w-full overflow-x-auto p-2">
+          <Table>
+            {/* Table Header */}
+            <TableHeader className="bg-[#F4F6F8] border-b border-gray-100 dark:border-white/[0.05]">
+              <TableRow>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  User
                 </TableCell>
-                <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                  {order.projectName}
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Project Name
                 </TableCell>
 
-                <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                  <Badge
-                    size="sm"
-                    color={
-                      order.status === "Active"
-                        ? "success"
-                        : order.status === "Pending"
-                        ? "warning"
-                        : "error"
-                    }
-                  >
-                    {order.status}
-                  </Badge>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Status
                 </TableCell>
-                <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">
-                  {order.budget}
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Budget
                 </TableCell>
-                <TableCell className="px-4 py-3 text-start">
-                  <Menu>
-                    <MenuHandler>
-                      <IconButton variant="text" className="p-1">
-                        <CiMenuKebab className="w-5 h-5 text-gray-500" />
-                      </IconButton>
-                    </MenuHandler>
-                    <MenuList className="min-w-[120px] flex flex-col gap-3 text-[16px font-semibold]">
-                      <MenuItem
-                        onClick={() => {
-                          setIsShowing(true),
-                          setIsAddEditCustomerDialogOpen(true);
-                        }}
-                        className="flex items-center gap-4"
-                      >
-                        <View className="w-5 h-5" />
-                        <span>{t("COMMON.VIEW")}</span>
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          setIsEditing(true),
-                            setIsAddEditCustomerDialogOpen(true);
-                        }}
-                        className="flex items-center gap-4"
-                      >
-                        <Edit className="w-5 h-5" />
-                        <span>{t("COMMON.EDIT")}</span>
-                      </MenuItem>
-                      <MenuItem onClick={()=>handleDelete()} className="flex items-center gap-4 text-red-500">
-                        <Delete className="w-5 h-5" />
-                        <span>{t("COMMON.DELETE")}</span>
-                      </MenuItem>
-                    </MenuList>
-                  </Menu>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Actions
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        <Pagination currentPage={1} totalPages={10} onPageChange={() => {}} />
+            </TableHeader>
+
+            {/* Table Body */}
+            <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
+              {tableData.map((order) => (
+                <TableRow key={order.id}>
+                  <TableCell className="px-5 py-4 sm:px-6 text-start">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 overflow-hidden rounded-full">
+                        <img
+                          width={40}
+                          height={40}
+                          src={order.user.image}
+                          alt={order.user.name}
+                        />
+                      </div>
+                      <div>
+                        <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
+                          {order.user.name}
+                        </span>
+                        <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
+                          {order.user.role}
+                        </span>
+                      </div>
+                    </div>
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                    {order.projectName}
+                  </TableCell>
+
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                    <Badge
+                      size="sm"
+                      color={
+                        order.status === "Active"
+                          ? "success"
+                          : order.status === "Pending"
+                          ? "warning"
+                          : "error"
+                      }
+                    >
+                      {order.status}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">
+                    {order.budget}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-start">
+                    <Menu>
+                      <MenuHandler>
+                        <IconButton variant="text" className="p-1">
+                          <CiMenuKebab className="w-5 h-5 text-gray-500" />
+                        </IconButton>
+                      </MenuHandler>
+                      <MenuList className="min-w-[120px] flex flex-col gap-3 text-[16px font-semibold]">
+                        <MenuItem
+                          onClick={() => {
+                            setIsShowing(true),
+                              setIsAddEditCustomerDialogOpen(true);
+                          }}
+                          className="flex items-center gap-4"
+                        >
+                          <View className="w-5 h-5" />
+                          <span>{t("COMMON.VIEW")}</span>
+                        </MenuItem>
+                        <MenuItem
+                          onClick={() => {
+                            setIsEditing(true),
+                              setIsAddEditCustomerDialogOpen(true);
+                          }}
+                          className="flex items-center gap-4"
+                        >
+                          <Edit className="w-5 h-5" />
+                          <span>{t("COMMON.EDIT")}</span>
+                        </MenuItem>
+                        <MenuItem
+                          onClick={() => handleDelete()}
+                          className="flex items-center gap-4 text-red-500"
+                        >
+                          <Delete className="w-5 h-5" />
+                          <span>{t("COMMON.DELETE")}</span>
+                        </MenuItem>
+                      </MenuList>
+                    </Menu>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <Pagination currentPage={1} totalPages={10} onPageChange={() => {}} />
+        </div>
       </div>
 
       {/* add edit customer dialog */}
 
       {renderAddEditDialog()}
-      {confirmationDelete &&(
-        <DeleteAlert onClose={()=>setConfirmationDelete(false)} />
+      {confirmationDelete && (
+        <DeleteAlert onClose={() => setConfirmationDelete(false)} />
       )}
     </div>
   );

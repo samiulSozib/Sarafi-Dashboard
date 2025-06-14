@@ -103,9 +103,9 @@ export const RecentCustomerTransactionSection = () => {
 
   return (
     <div className="col-span-12">
-      <div className="flex flex-row gap-2 items-center bg-[#F4F6F8] mt-2 p-2">
-        <span className="font-semibold">Recent Customer Transaction</span>
+      <div className="flex flex-row gap-2 items-center bg-[#F4F6F8] mt-2 p-2 rounded-md">
         <BlueSignal className="w-6 h-6"/>
+        <span className="font-semibold">{t('HOME.RECENT_CUSTOMER_TRANSACTION')}</span>
       </div>
 
       <div className="col-span-12 grid grid-cols-12 gap-3 md:gap-6 p-2 mb-2">

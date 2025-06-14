@@ -50,8 +50,9 @@ export default function AccountSummary() {
   return (
     <div className="bg-white rounded-lg p-4 shadow-md text-center">
       <div className="flex flex-row items-center gap-x-2">
-        <span className="font-semibold">{t("HOME.ACCOUNT_SUMMARY")}</span>
         <BlueSignal className="w-6 h-6"/>
+        <span className="font-semibold">{t("HOME.ACCOUNT_SUMMARY")}</span>
+        
       </div>
       <Chart
         options={options}

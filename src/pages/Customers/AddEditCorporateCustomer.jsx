@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Button from "../../components/ui/button/Button";
 import { BlueSignal } from "../../icons";
-import SuccessAlert from "../../components/sweetalert/SuccessAlert";
+import SuccessAlert from "./sweetalert/SuccessAlert";
 import { useState } from "react";
 
 export const AddEditCorporateCustomerDialog = ({
@@ -26,8 +26,9 @@ export const AddEditCorporateCustomerDialog = ({
       {showForm && (
         <div className="bg-white rounded-xl p-8 w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col">
           <div className="flex flex-row items-center gap-2 p-3 bg-[#F4F6F8] rounded-lg mb-3">
-            <span>{t("CUSTOMER.NEW_CUSTOMER_INFORMATION")}</span>
             <BlueSignal className="w-6 h-6" />
+            <span>{t("CUSTOMER.NEW_CUSTOMER_INFORMATION")}</span>
+            
           </div>
           {/* Add your form fields here */}
           <div className="col-span-12 grid grid-cols-12 gap-3 md:gap-6 p-2 mb-2">
@@ -282,7 +283,7 @@ export const AddEditCorporateCustomerDialog = ({
             <Button
               type="button"
               onClick={onClose}
-              className="bg-[#fff] text-[#000] w-[150px] py-2 border border-gray-300 rounded-lg shadow-sm text-sm font-medium hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="bg-[#fff] text-[#000] w-[150px] py-2 border border-gray-300 rounded-lg shadow-sm text-sm font-medium hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               {t("COMMON.BACK")}
             </Button>

@@ -41,64 +41,112 @@ const AppSidebar = () => {
   const subMenuRefs = useRef({});
 
   // Memoized navigation items configuration
-  const navItems = useMemo(() => [
-    {
-      icon: < SideNavDashboard/>,
-      name: "SIDEBAR.DASHBOARD",
-      path: "/",
-    },
-    {
-      icon: <SideNavUser />,
-      name: "SIDEBAR.CUSTOMER",
-      subItems: [
-        { name: "SIDEBAR.PERMANENT_CUSTOMERS", path: "/customer/permanent-customers" },
-        { name: "SIDEBAR.TEMPORARY_CUSTOMERS", path: "/customer/temporary-customers" },
-        { name: "SIDEBAR.CORPORATE_CUSTOMERS", path: "/customer/corporate-customers" },
-        { name: "SIDEBAR.CUSTOMER_DEPOSIT_ACCOUNT", path: "/customer/customer-deposit-account" },
+const navItems = useMemo(() => [
+  {
+    icon: <SideNavDashboard />,
+    name: "SIDEBAR.DASHBOARD",
+    path: "/"
+  },
+  {
+    icon: <SideNavUser />,
+    name: "SIDEBAR.CUSTOMER",
+    subItems: [
+      { name: "SIDEBAR.PERMANENT_CUSTOMERS", path: "/customer/permanent-customers" },
+      { name: "SIDEBAR.TEMPORARY_CUSTOMERS", path: "/customer/temporary-customers" },
+      { name: "SIDEBAR.CORPORATE_CUSTOMERS", path: "/customer/corporate-customers" },
+      { name: "SIDEBAR.CUSTOMER_DEPOSIT_ACCOUNT", path: "/customer/customer-deposit-account" }
+    ]
+  },
+  {
+    icon: <SideNavFinance />,
+    name: "SIDEBAR.FINANCIAL_SERVICES",
+    subItems: [
+      { name: "SIDEBAR.CURRENCY_CONVERSION", path: "/financial/currency-conversion" },
+      { name: "SIDEBAR.SEND_CURRENCY", path: "/financial/send-currency" },
+      { name: "SIDEBAR.RECEIVE_CURRENCY", path: "/financial/receive-currency" },
+      { name: "SIDEBAR.ACCOUNT_TO_ACCOUNT_TRANSFER", path: "/financial/account-transfer" },
+      { name: "SIDEBAR.DEPOSIT_TO_SAVINGS", path: "/financial/deposit-savings" },
+      { name: "SIDEBAR.CUSTOMER_TRANSACTION_HISTORY", path: "/financial/transaction-history" }
+    ]
+  },
+  {
+    icon: <SideNavReport />,
+    name: "SIDEBAR.REPORTS",
+    subItems: [
+      { name: "SIDEBAR.EXCHANGE_FINANCIAL_STATUS", path: "/reports/exchange-financial-status" },
+      { name: "SIDEBAR.BRANCH_INDICATOR_REPORT", path: "/reports/branch-indicator" },
+      { name: "SIDEBAR.PROFIT_AND_LOSS", path: "/reports/profit-loss" },
+      { name: "SIDEBAR.CURRENCY_EXCHANGE_REPORT", path: "/reports/currency-exchange" },
+      { name: "SIDEBAR.CURRENCY_SENDING_REPORT", path: "/reports/currency-sending" },
+      { name: "SIDEBAR.DELETED_TRANSACTIONS", path: "/reports/deleted-transactions" },
+      { name: "SIDEBAR.TOTAL_TRANSFERS_REPORT", path: "/reports/total-transfers" }
+    ]
+  },
+  {
+    icon: <SideNavUserGroup />,
+    name: "SIDEBAR.HUMAN_RESOURCES",
+    subItems: [
+      { name: "SIDEBAR.EMPLOYEES", path: "/hr/employees" },
+      { name: "SIDEBAR.SHAREHOLDERS", path: "/hr/shareholders" },
+      { name: "SIDEBAR.ORGANIZATIONAL_STRUCTURE", path: "/hr/organizational-structure" }
+    ]
+  },
+  {
+    icon: <SideNavAsset />,
+    name: "SIDEBAR.ASSETS",
+    subItems: [
+      { name: "SIDEBAR.BRANCH_CAPITAL", path: "/assets/branch-capital" },
+      { name: "SIDEBAR.BANK_CAPITAL", path: "/assets/bank-capital" },
+      { name: "SIDEBAR.EXPENSES", path: "/assets/expenses" },
+      { name: "SIDEBAR.OTHER_ITEMS", path: "/assets/other-items" }
+    ]
+  },
+  {
+    icon: <SideNavSpecialTransactions />,
+    name: "SIDEBAR.SPECIAL_TRANSACTIONS",
+    subItems: [
+      {
+        name: "SIDEBAR.LARGE_CASH_TRANSACTIONS",
+        subItems: [
+          { name: "SIDEBAR.INDIVIDUAL_LARGE_CASH", path: "/special/large-cash/individual" },
+          { name: "SIDEBAR.REPEATED_LARGE_CASH", path: "/special/large-cash/repeated" }
+        ]
+      },
+      {
+        name: "SIDEBAR.SUSPICIOUS_TRANSACTIONS",
+        subItems: [
+          { name: "SIDEBAR.LARGE_SUSPICIOUS_CASH", path: "/special/suspicious/large-cash" },
+          { name: "SIDEBAR.INDIVIDUAL_SUSPICIOUS", path: "/special/suspicious/individual" }
+        ]
+      },
+      { name: "SIDEBAR.BORDER_PROVINCES", path: "/special/border-provinces" }
+    ]
+  },
+  {
+    icon: <SideNavLiabilities />,
+    name: "SIDEBAR.LIABILITIES_AND_PAYMENTS",
+    path: "/liabilities"
+  },
+  {
+    icon: <SideNavSanctions />,
+    name: "SIDEBAR.SANCTIONS_LIST_COMPLIANCE",
+    path: "/sanctions"
+  },
+  {
+    icon: <SideNavSettings />,
+    name: "SIDEBAR.SETTINGS",
+    subItems: [
+      { name: "SIDEBAR.SYSTEM_ACCOUNT", path: "/settings/system-account" },
+      { name: "SIDEBAR.BRANCH", path: "/settings/branch" },
+      { name: "SIDEBAR.USER", path: "/settings/user" },
+      { name: "SIDEBAR.SYSTEM_INFORMATION", path: "/settings/system-information" },
+      { name: "SIDEBAR.BIOMETRIC", path: "/settings/biometric" },
+      { name: "SIDEBAR.BACKUP_SYSTEM_DATA", path: "/settings/backup-data" },
+      { name: "SIDEBAR.CURRENCY", path: "/settings/currency" }
+    ]
+  }
+], []);
 
-      ],
-    },
-    {
-      icon: <SideNavFinance />,
-      name: "SIDEBAR.FINANCIAL_SERVICES",
-      path: "/stations",
-    },
-    {
-      icon: <SideNavReport />,
-      name: "SIDEBAR.REPORTS",
-      path: "/routes",
-    },
-    {
-      icon: <SideNavUserGroup />,
-      name: "SIDEBAR.HUMAN_RESOURCES",
-      path: "/discounts",
-    },
-    {
-      icon: <SideNavAsset />,
-      name: "SIDEBAR.ASSETS",
-      path: "/trips",
-    },
-    {
-      icon: <SideNavSpecialTransactions />,
-      name: "SIDEBAR.SPECIAL_TRANSACTIONS",
-      path: "/users",
-    },
-    {
-      icon: <SideNavLiabilities />,
-      name: "SIDEBAR.LIABILITIES_AND_PAYMENTS",
-      path: "/buses",
-    },
-    {
-      icon: <SideNavSanctions />,
-      name: "SIDEBAR.SANCTIONS_LIST_RECONCILIATION",
-      path: "/buses",
-    },
-    {
-      icon: <SideNavSettings />,
-      name: "SIDEBAR.SETTINGS",
-      path: "/drivers",
-    },
-  ], []);
 
   const othersItems = useMemo(() => [
     // {

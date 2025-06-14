@@ -95,8 +95,9 @@ const series = [
   return (
     <div className="p-4 bg-white rounded-lg shadow">
       <div className="flex flex-row items-center gap-x-2">
+        <GreenSignal className="w-9 h-9"/>
           <span className="font-semibold">{t("HOME.FINANCIAL_SUMMARY")}</span>
-          <GreenSignal className="w-9 h-9"/>
+          
         </div>
       <div id="financial-chart">
         <Chart 

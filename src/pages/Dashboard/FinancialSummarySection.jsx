@@ -99,8 +99,9 @@ export const FinancialSummarySection = () => {
     <div className="col-span-12 bg-[#D1D1FF] mt-2 p-3 rounded-md">
       <div className="flex flex-row justify-between mb-3">
         <div className="flex flex-row items-center gap-x-2">
-          <span>{t("HOME.FINANCIAL_SUMMARY")}</span>
           <GreenSignal className="w-9 h-9"/>
+          <span>{t("HOME.FINANCIAL_SUMMARY")}</span>
+          
         </div>
       </div>
 
