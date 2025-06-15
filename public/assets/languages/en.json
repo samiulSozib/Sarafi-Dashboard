@@ -142,8 +142,40 @@
     "EDIT_INFORMATION":"Edit Information",
     "DOWNLOAD_EXCEL_FILE":"Download Excel File",
     "PRINT":"Print",
-    "TRANSACTION":"Transaction"
+    "TRANSACTION":"Transaction",
+    "CUSTOMERS":"Customers"
   },
+  "CURRENCY_CONVERSION":{
+      "CURRENCY_CONVERSION":"Currency Conversion",
+      "ADD_CURRENCY_CONVERSION":"Add Currency Conversion",
+      "VIEW_CURRENCY_CONVERSION":"View Currency Conversion",
+      "EDIT_CURRENCY_CONVERSION":"Edit Currency Conversion",
+      "CURRENCY_CONVERSION_HISTORY":"Currency Conversion History",
+      "NEW_CURRENCY_EXCHANGE":"New Currency Exchange",
+      "TRANSACTION_TYPE":"Transaction Type",
+      "CURRENCY_DEPOSITED":"Currency Deposited",
+      "CURRENCY_WITHDRAWN":"Currency Withdrawn",
+      "DEPOSITED_AMOUNT":"Deposited Amount",
+      "RECEIVED_AMOUNT":"Received Amount",
+      "REAL_TIME_USD_RATE":"Real-time USD Rate"
+    },
+    "SEND_CURRENCY":{
+      "SEND_CURRENCY":"Send Currency",
+      "SENDER_INFORMATION":"Sender Information",
+      "RECIPIENT_INFORMATION":"Recipient Information",
+      "CURRENCY_DEPOSIT":"Currency Deposit",
+      "DEPOSIT_AMOUNT":"Deposit Amount",
+      "CURRENCY_RECEIVE":"Currency Receive",
+      "AMOUNT_RECEIVE":"Amount Receive",
+      "REAL_TIME_USD_RATE":"Real-time USD Rate",
+      "COMMISSION_PAYMENT":"Commission Payment",
+      "COMMISSION_AMOUNT":"Commission Amount",
+      "ONE_WAY":"One Way {{text}}",
+      "TWO_WAY":"Tow Way {{text}}",
+      "TOTAL_PAYMENT":"Total Payment",
+      "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY":"Agency for receiving foreign currency",
+      "INFORMATION_SUCCESSFULLY_REGISTERED":"Information Successfully Registered"
+    },
   "COMMON": {
     "TOTAL": "Total",
     "AMOUNT": "Amount",
@@ -158,7 +190,11 @@
     "DELETE": "Delete",
     "EDIT": "Edit",
     "ARE_YOU_SURE_ABOUT_REMOVING": "Are You Sure Removing",
+    "ARE_YOU_SURE_YOU_WANT_TO_DELETE":"Are You Sure You Want to Delete?",
     "YES_DELETE": "Yes, Delete",
-    "THE_REMOVAL_OF_SUCCESSFULLY": "The removal of {{item}} was successfully."
+    "THE_REMOVAL_OF_SUCCESSFULLY": "The removal of {{item}} was successfully.",
+    "THE_DELETION_IS_SUCCESSFUL":"The Deletion is Successful",
+    "SAVE_AS_PDF":"Save as PDF",
+    "SAVE_AS_IMAGE":"Save Image"
   }
 }

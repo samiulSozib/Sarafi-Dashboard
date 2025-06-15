@@ -17,6 +17,9 @@ import Home from "./pages/Dashboard/Home";
 
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { Customers } from "./pages/Customers/Customers";
+import { CurrencyConversion } from "./pages/FinancialServices/CurrencyConversion/CurrencyConversion";
+import { CurrencyConversionForm } from "./pages/FinancialServices/CurrencyConversion/CurrencyConversionForm";
+import { SendCurrency } from "./pages/FinancialServices/SendCurrency/SendCurrency";
 
 export default function App() {
   return (
@@ -29,6 +32,12 @@ export default function App() {
             {/* <Route index path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
             <Route index path="/" element={<Home />} />
             <Route index path="/customer/:customerType" element={<Customers/>}/>
+            <Route index path="/financial-services/currency-conversion" element={<CurrencyConversion/>}/>
+            <Route index path="/financial-services/currency-conversion-form" element={<CurrencyConversionForm/>}/>
+            <Route index path="/financial-services/send-currency" element={<SendCurrency/>}/>
+
+
+
             
 
             

@@ -61,8 +61,8 @@ const navItems = useMemo(() => [
     icon: <SideNavFinance />,
     name: "SIDEBAR.FINANCIAL_SERVICES",
     subItems: [
-      { name: "SIDEBAR.CURRENCY_CONVERSION", path: "/financial/currency-conversion" },
-      { name: "SIDEBAR.SEND_CURRENCY", path: "/financial/send-currency" },
+      { name: "SIDEBAR.CURRENCY_CONVERSION", path: "/financial-services/currency-conversion" },
+      { name: "SIDEBAR.SEND_CURRENCY", path: "/financial-services/send-currency" },
       { name: "SIDEBAR.RECEIVE_CURRENCY", path: "/financial/receive-currency" },
       { name: "SIDEBAR.ACCOUNT_TO_ACCOUNT_TRANSFER", path: "/financial/account-transfer" },
       { name: "SIDEBAR.DEPOSIT_TO_SAVINGS", path: "/financial/deposit-savings" },
