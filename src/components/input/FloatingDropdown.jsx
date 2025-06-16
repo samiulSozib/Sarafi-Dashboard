@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FloatingSelect = ({
+const FloatingDropdown = ({
   label,
   options = [],
   value,
@@ -96,4 +96,4 @@ const FloatingSelect = ({
   );
 };
 
-export default FloatingSelect;
+export default FloatingDropdown;

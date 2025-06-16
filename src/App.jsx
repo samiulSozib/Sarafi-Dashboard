@@ -20,6 +20,11 @@ import { Customers } from "./pages/Customers/Customers";
 import { CurrencyConversion } from "./pages/FinancialServices/CurrencyConversion/CurrencyConversion";
 import { CurrencyConversionForm } from "./pages/FinancialServices/CurrencyConversion/CurrencyConversionForm";
 import { SendCurrency } from "./pages/FinancialServices/SendCurrency/SendCurrency";
+import { ReceivedCurrency } from "./pages/FinancialServices/ReceivedCurrency/ReceivedCurrency";
+import { AccountToAccountTransfer } from "./pages/FinancialServices/AccountToAccountTransfer/AccountToAccountTransfer";
+import { DepositToBank } from "./pages/FinancialServices/DepositToBank/DepositToBank";
+import { TransactionHistory } from "./pages/FinancialServices/TransactionHistory/TransactionHistory";
+import {TransactionHistoryForm} from "./pages/FinancialServices/TransactionHistory/TransactionHistoryForm";
 
 export default function App() {
   return (
@@ -32,9 +37,18 @@ export default function App() {
             {/* <Route index path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
             <Route index path="/" element={<Home />} />
             <Route index path="/customer/:customerType" element={<Customers/>}/>
+
+
             <Route index path="/financial-services/currency-conversion" element={<CurrencyConversion/>}/>
             <Route index path="/financial-services/currency-conversion-form" element={<CurrencyConversionForm/>}/>
             <Route index path="/financial-services/send-currency" element={<SendCurrency/>}/>
+            <Route index path="/financial-services/received-currency" element={<ReceivedCurrency/>}/>
+            <Route index path="/financial-services/account-to-account-transfer" element={<AccountToAccountTransfer/>}/>
+            <Route index path="/financial-services/deposit-to-bank" element={<DepositToBank/>}/>
+            <Route index path="/financial-services/transaction-history" element={<TransactionHistory/>}/>
+            <Route index path="/financial-services/transaction-history-form" element={<TransactionHistoryForm/>}/>
+
+
 
 
 

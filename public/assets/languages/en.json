@@ -176,6 +176,55 @@
       "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY":"Agency for receiving foreign currency",
       "INFORMATION_SUCCESSFULLY_REGISTERED":"Information Successfully Registered"
     },
+    "RECEIVED_CURRENCY":{
+      "RECEIVE_CURRENCY":"Receive Currency",
+      "TRACKING_NUMBER":"Tracking Number",
+      "RECIPIENT_NAME":"Recipient Name",
+      "REMITTANCE_RECEIPT_SUCCESSFULLY_CONFIRMED":"Remittance Receipt Successfully Confirmed"
+    },
+    "ACCOUNT_TO_ACCOUNT_TRANSFER":{
+      "ACCOUNT_TO_ACCOUNT_TRANSFER":"Account to Account Transfer",
+      "SENDER_INFORMATION":"Sender Information",
+      "CUSTOMER_NAME":"Customer Name",
+      "ACCOUNT_NUMBER":"Account Number",
+      "BRANCH":"Branch",
+      "RECIPIENT_INFORMATION":"Recipient Information",
+      "DEPOSIT_CURRENCY":"Deposit Currency",
+      "DEPOSIT_AMOUNT":"Deposit Amount"
+    },
+    "DEPOSIT_TO_BANK":{
+      "CASH_DEPOSIT_TO_BANK_ACCOUNT":"Cash Deposit to Bank Account",
+      "ACCOUNT_HOLDER_INFORMATION":"Account Holder Information",
+      "CUSTOMER_NAME":"Customer Name",
+      "ACCOUNT_NUMBER":"Account Number",
+      "BRANCH":"Branch",
+      "DEPOSIT_CURRENCY":"Deposit Currency",
+      "DEPOSIT_AMOUNT":"Deposit Amount"
+    },
+    "CUSTOMER_TRANSACTION_HISTORY":{
+      "VIEW_ACCOUNT_INFORMATION":"View Account Information",
+      "TRANSACTION_HISTORY_DETAILS":"Transaction History Details",
+      "SENDER_INFORMATION": "Sender information",
+      "DATE": "Date",
+      "TIME": "Time",
+      "CUSTOMER_NAME": "Customer name",
+      "PERMANENT_CUSTOMER": "Permanent Customer",
+      "RECIPIENT_INFORMATION": "Recipient information",
+      "TEMPORARY_CUSTOMER": "Temporary Customer",
+      "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY": "Agency for receiving foreign currency",
+      "DEPOSIT_AMOUNT": "Deposit amount",
+      "CURRENCY_DEPOSIT": "Currency deposit",
+      "REAL_TIME_USD_RATE": "Real-time USD Rate",
+      "AMOUNT_RECEIVED": "Amount received",
+      "CURRENCY_RECEIVE": "Currency Receive",
+      "COMMISSION_PAYMENT": "Commission payment",
+      "COMMISSION_AMOUNT": "Commission amount",
+      "TWO_WAY": "Two-way (10%)",
+      "ONE_WAY": "One-way (3%)",
+      "TOTAL_PAYMENT": "Total payment",
+      "EDIT_INFORMATION": "Edit information",
+      "CANCEL_TRANSACTION": "Cancel Transaction"
+    },
   "COMMON": {
     "TOTAL": "Total",
     "AMOUNT": "Amount",
@@ -195,6 +244,10 @@
     "THE_REMOVAL_OF_SUCCESSFULLY": "The removal of {{item}} was successfully.",
     "THE_DELETION_IS_SUCCESSFUL":"The Deletion is Successful",
     "SAVE_AS_PDF":"Save as PDF",
-    "SAVE_AS_IMAGE":"Save Image"
+    "SAVE_AS_IMAGE":"Save Image",
+    "CONFIRM_RECEIPT":"Confirm Receipt",
+    "PRINT_INFORMATION":"Print Information",
+    "DESCRIPTION_OPTIONAL":"Description (Optional)",
+    "CONFIRM_AND_TRANSFER":"Confirm & Transfer"
   }
 }

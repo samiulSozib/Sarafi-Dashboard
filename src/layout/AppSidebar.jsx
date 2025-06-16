@@ -63,10 +63,10 @@ const navItems = useMemo(() => [
     subItems: [
       { name: "SIDEBAR.CURRENCY_CONVERSION", path: "/financial-services/currency-conversion" },
       { name: "SIDEBAR.SEND_CURRENCY", path: "/financial-services/send-currency" },
-      { name: "SIDEBAR.RECEIVE_CURRENCY", path: "/financial/receive-currency" },
-      { name: "SIDEBAR.ACCOUNT_TO_ACCOUNT_TRANSFER", path: "/financial/account-transfer" },
-      { name: "SIDEBAR.DEPOSIT_TO_SAVINGS", path: "/financial/deposit-savings" },
-      { name: "SIDEBAR.CUSTOMER_TRANSACTION_HISTORY", path: "/financial/transaction-history" }
+      { name: "SIDEBAR.RECEIVE_CURRENCY", path: "/financial-services/received-currency" },
+      { name: "SIDEBAR.ACCOUNT_TO_ACCOUNT_TRANSFER", path: "/financial-services/account-to-account-transfer" },
+      { name: "SIDEBAR.DEPOSIT_TO_SAVINGS", path: "/financial-services/deposit-to-bank" },
+      { name: "SIDEBAR.CUSTOMER_TRANSACTION_HISTORY", path: "/financial-services/transaction-history" }
     ]
   },
   {
