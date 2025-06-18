@@ -25,6 +25,16 @@ import { AccountToAccountTransfer } from "./pages/FinancialServices/AccountToAcc
 import { DepositToBank } from "./pages/FinancialServices/DepositToBank/DepositToBank";
 import { TransactionHistory } from "./pages/FinancialServices/TransactionHistory/TransactionHistory";
 import {TransactionHistoryForm} from "./pages/FinancialServices/TransactionHistory/TransactionHistoryForm";
+import { ExchangeFinancialStatus } from "./pages/Reports/ExchangeFinancialStatus/ExchangeFinancialStatus";
+import { BranchIndicatorReport } from "./pages/Reports/BranchIndicatorReport/BranchIndicatorReport";
+import { CurrencyExchangeReport } from "./pages/Reports/CurrencyExchangeReport/CurrencyExchangeReport";
+import { CurrencySendingReport } from "./pages/Reports/CurrencySendingReport/CurrencySendingReport";
+import { DeletedTransactions } from "./pages/Reports/DeletedTransactions/DeletedTransactions";
+import { TotalTransferReport } from "./pages/Reports/TotalTransferReport/TotalTransferReport";
+import { ProfitAndLoss } from "./pages/Reports/ProfitAndLoss/ProfitAndLoss";
+import { Employees } from "./pages/HumanResources/Employees/Employees";
+import { ShareHolder } from "./pages/HumanResources/Shareholders/ShareHolder";
+import { OrganizationStructure } from "./pages/HumanResources/OrganizationalStructure/OrganizationStructure";
 
 export default function App() {
   return (
@@ -47,6 +57,28 @@ export default function App() {
             <Route index path="/financial-services/deposit-to-bank" element={<DepositToBank/>}/>
             <Route index path="/financial-services/transaction-history" element={<TransactionHistory/>}/>
             <Route index path="/financial-services/transaction-history-form" element={<TransactionHistoryForm/>}/>
+
+
+            <Route index path="/reports/exchange-financial-status" element={<ExchangeFinancialStatus/>}/>
+            <Route index path="/reports/branch-indicator" element={<BranchIndicatorReport/>}/>
+            <Route index path="/reports/profit-loss" element={<ProfitAndLoss/>}/>
+            <Route index path="/reports/currency-exchange" element={<CurrencyExchangeReport/>}/>
+            <Route index path="/reports/currency-sending" element={<CurrencySendingReport/>}/>
+            <Route index path="/reports/deleted-transactions" element={<DeletedTransactions/>}/>
+            <Route index path="/reports/total-transfers" element={<TotalTransferReport/>}/>
+
+
+            <Route index path="/human-resources/employees" element={<Employees/>}/>
+            <Route index path="/human-resources/shareholders" element={<ShareHolder/>}/>
+            <Route index path="/human-resources/organizational-structure" element={<OrganizationStructure/>}/>
+
+
+
+
+
+
+
+
 
 
 

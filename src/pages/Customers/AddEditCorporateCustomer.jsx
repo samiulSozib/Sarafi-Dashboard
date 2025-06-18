@@ -27,7 +27,7 @@ export const AddEditCorporateCustomerDialog = ({
         <div className="bg-white rounded-xl p-8 w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col">
           <div className="flex flex-row items-center gap-2 p-3 bg-[#F4F6F8] rounded-lg mb-3">
             <BlueSignal className="w-6 h-6" />
-            <span>{t("CUSTOMER.NEW_CUSTOMER_INFORMATION")}</span>
+            <span className="font-semibold text-[18px] leading-8">{t("CUSTOMER.NEW_CUSTOMER_INFORMATION")}</span>
             
           </div>
           {/* Add your form fields here */}

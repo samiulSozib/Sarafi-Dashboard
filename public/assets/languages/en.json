@@ -225,6 +225,76 @@
       "EDIT_INFORMATION": "Edit information",
       "CANCEL_TRANSACTION": "Cancel Transaction"
     },
+    "FINANCIAL_REPORTS":{
+      "FINANCIAL_REPORT":"Financial Report",
+      "RECENT_TRANSACTION":"Recent Transaction"
+    },
+    "BRANCH_INDICATOR_REPORT":{
+      "BRANCH_INDICATOR_REPORT":"Branch Indicator Report"
+    },
+    "PROFIT_LOSS":{
+      "PROFIT_AND_LOSS_REPORT":"Profit and Loss Report"
+    },
+    "CURRENCY_EXCHANGE_REPORT":{
+      "CURRENCY_EXCHANGE_REPORT":"Currency Exchange Report"
+    },
+    "CURRENCY_SENDING_REPORT":{
+      "CURRENCY_SENDING_REPORT":"Currency Sending Report"
+    },
+    "DELETED_TRANSACTIONS":{
+      "DELETED_TRANSACTIONS":"Deleted Transactions"
+    },
+    "TOTAL_TRANSFERS_REPORT":{
+      "TOTAL_TRANSFERS_REPORT":"Total Transfers Report"
+    },
+    "EMPLOYEES": {
+    "EMPLOYEES": "Employees",
+    "ADD_NEW_EMPLOYEE": "Add New Employee",
+    "DATE_OF_EMPLOYMENT": "Date of employment",
+    "FATHERS_NAME": "Father's name",
+    "FULL_NAME": "Full name",
+    "DATE_OF_BIRTH": "Date of birth",
+    "ID_NUMBER": "ID number",
+    "ID_TYPE": "ID type",
+    "BRANCH": "Branch",
+    "CURRENCY": "Currency",
+    "SALARY": "Salary",
+    "EDUCATION": "Education",
+    "POSITION": "Position",
+    "SENIOR_MANAGER": "Senior manager",
+    "ADDRESS": "Address (optional)",
+    "EMAIL": "Email (optional)",
+    "PHONE_NUMBER": "Phone number",
+    "PROFILE_PHOTO": "Profile photo",
+    "FINGERPRINT": "Fingerprint"
+  },
+  "SHAREHOLDERS": {
+    "SHAREHOLDERS": "Shareholders",
+    "ADD_SHAREHOLDER": "Add Shareholder",
+    "FULL_NAME": "Full name",
+    "FATHER_NAME": "Father's name",
+    "RATE": "Rate",
+    "REMAINING_SHARE": "Remaining share at 100%",
+    "COUNTRY_RESIDENCE": "Country of residence",
+    "ID_NUMBER": "ID number",
+    "ID_TYPE": "ID type",
+    "DATE_OF_MEMBERSHIP": "Date of membership",
+    "DATE_OF_BIRTH": "Date of birth",
+    "COUNTRY_OF_BIRTH": "Country of birth",
+    "ADDRESS": "Address (optional)",
+    "EMAIL": "Email (optional)",
+    "PHONE_NUMBER": "Phone number",
+    "UPLOAD_PHOTO": "Upload photo",
+    "PROFILE_PHOTO": "Profile photo",
+    "SCAN": "Scan",
+    "FINGERPRINT": "Fingerprint",
+    "CONFIRM_SAVE": "Confirm & Save",
+    "BACK": "Back",
+    "SELECT": "Select"
+  },
+  "ORGANIZATIONAL_STRUCTURE":{
+    "ORGANIZATIONAL_STRUCTURE":"Organization Structure"
+  },
   "COMMON": {
     "TOTAL": "Total",
     "AMOUNT": "Amount",
@@ -248,6 +318,16 @@
     "CONFIRM_RECEIPT":"Confirm Receipt",
     "PRINT_INFORMATION":"Print Information",
     "DESCRIPTION_OPTIONAL":"Description (Optional)",
-    "CONFIRM_AND_TRANSFER":"Confirm & Transfer"
+    "CONFIRM_AND_TRANSFER":"Confirm & Transfer",
+    "DOWNLOAD_EXCEL_FILE":"Download Excel File",
+    "UPLOAD_DOCUMENTS": "Upload documents",
+    "UPLOAD_FORMAT_INFO": "JPEG, PNG, PDF, and MP4 formats, up to 50MB",
+    "SELECT_FILE": "Select file",
+    "UPLOAD_PHOTO": "Upload photo",
+    "SCAN": "Scan",
+    "UPLOADING": "Uploading...",
+    "FILE_NAME": "File name",
+    "FILE_SIZE": "File size",
+    "PERSONAL_NUMBER":"Personal Number"
   }
 }

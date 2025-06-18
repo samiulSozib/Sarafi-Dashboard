@@ -86,9 +86,9 @@ const navItems = useMemo(() => [
     icon: <SideNavUserGroup />,
     name: "SIDEBAR.HUMAN_RESOURCES",
     subItems: [
-      { name: "SIDEBAR.EMPLOYEES", path: "/hr/employees" },
-      { name: "SIDEBAR.SHAREHOLDERS", path: "/hr/shareholders" },
-      { name: "SIDEBAR.ORGANIZATIONAL_STRUCTURE", path: "/hr/organizational-structure" }
+      { name: "SIDEBAR.EMPLOYEES", path: "/human-resources/employees" },
+      { name: "SIDEBAR.SHAREHOLDERS", path: "/human-resources/shareholders" },
+      { name: "SIDEBAR.ORGANIZATIONAL_STRUCTURE", path: "/human-resources/organizational-structure" }
     ]
   },
   {
