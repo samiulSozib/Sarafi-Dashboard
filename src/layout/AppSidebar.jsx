@@ -107,16 +107,17 @@ const navItems = useMemo(() => [
     subItems: [
       {
         name: "SIDEBAR.LARGE_CASH_TRANSACTIONS",
+        path:"/special-transactions/large-cash/individual",
         subItems: [
-          { name: "SIDEBAR.INDIVIDUAL_LARGE_CASH", path: "/special/large-cash/individual" },
-          { name: "SIDEBAR.REPEATED_LARGE_CASH", path: "/special/large-cash/repeated" }
+          { name: "SIDEBAR.INDIVIDUAL_LARGE_CASH", path: "/special-transactions/large-cash/individual" },
+          { name: "SIDEBAR.REPEATED_LARGE_CASH", path: "/special-transactions/large-cash/repeated" }
         ]
       },
       {
         name: "SIDEBAR.SUSPICIOUS_TRANSACTIONS",
         subItems: [
-          { name: "SIDEBAR.LARGE_SUSPICIOUS_CASH", path: "/special/suspicious/large-cash" },
-          { name: "SIDEBAR.INDIVIDUAL_SUSPICIOUS", path: "/special/suspicious/individual" }
+          { name: "SIDEBAR.LARGE_SUSPICIOUS_CASH", path: "/special-transactions/suspicious/large-cash" },
+          { name: "SIDEBAR.INDIVIDUAL_SUSPICIOUS", path: "/special-transactions/suspicious/individual" }
         ]
       },
       { name: "SIDEBAR.BORDER_PROVINCES", path: "/special/border-provinces" }

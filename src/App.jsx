@@ -35,6 +35,11 @@ import { ProfitAndLoss } from "./pages/Reports/ProfitAndLoss/ProfitAndLoss";
 import { Employees } from "./pages/HumanResources/Employees/Employees";
 import { ShareHolder } from "./pages/HumanResources/Shareholders/ShareHolder";
 import { OrganizationStructure } from "./pages/HumanResources/OrganizationalStructure/OrganizationStructure";
+import { BankCapital } from "./pages/Assets/BankCapital/BankCapital";
+import { BranchCapital } from "./pages/Assets/BranchCapital/BranchCapital";
+import { Expenses } from "./pages/Assets/Expenses/Expense";
+import { OthersItem } from "./pages/Assets/OtherItems/OtherItems";
+import { Liabilities } from "./pages/Liabilities/Liabilities";
 
 export default function App() {
   return (
@@ -71,6 +76,21 @@ export default function App() {
             <Route index path="/human-resources/employees" element={<Employees/>}/>
             <Route index path="/human-resources/shareholders" element={<ShareHolder/>}/>
             <Route index path="/human-resources/organizational-structure" element={<OrganizationStructure/>}/>
+
+
+            <Route index path="/assets/branch-capital" element={<BranchCapital/>}/>
+            <Route index path="/assets/bank-capital" element={<BankCapital/>}/>
+            <Route index path="/assets/expenses" element={<Expenses/>}/>
+            <Route index path="/assets/other-items" element={<OthersItem/>}/>
+
+
+            <Route index path="/liabilities" element={<Liabilities/>}/>
+
+            
+
+            
+
+
 
 
 
