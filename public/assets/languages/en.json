@@ -5,7 +5,6 @@
   "SIDEBAR.TEMPORARY_CUSTOMERS": "Temporary Customers",
   "SIDEBAR.CORPORATE_CUSTOMERS": "Corporate Customers",
   "SIDEBAR.CUSTOMER_DEPOSIT_ACCOUNT": "Customer Deposit Account",
-  
   "SIDEBAR.FINANCIAL_SERVICES": "Financial Services",
   "SIDEBAR.CURRENCY_CONVERSION": "Currency Conversion",
   "SIDEBAR.SEND_CURRENCY": "Send Currency",
@@ -13,7 +12,6 @@
   "SIDEBAR.ACCOUNT_TO_ACCOUNT_TRANSFER": "Account-to-Account Transfer",
   "SIDEBAR.DEPOSIT_TO_SAVINGS": "Deposit Currency to Savings Account",
   "SIDEBAR.CUSTOMER_TRANSACTION_HISTORY": "Customer Transaction History",
-
   "SIDEBAR.REPORTS": "Reports",
   "SIDEBAR.EXCHANGE_FINANCIAL_STATUS": "Exchange Financial Status",
   "SIDEBAR.BRANCH_INDICATOR_REPORT": "Branch Indicator Report",
@@ -22,31 +20,25 @@
   "SIDEBAR.CURRENCY_SENDING_REPORT": "Currency Sending Report",
   "SIDEBAR.DELETED_TRANSACTIONS": "Deleted Transactions",
   "SIDEBAR.TOTAL_TRANSFERS_REPORT": "Total Transfers Report",
-
   "SIDEBAR.HUMAN_RESOURCES": "Human Resources",
   "SIDEBAR.EMPLOYEES": "Employees",
   "SIDEBAR.SHAREHOLDERS": "Shareholders",
   "SIDEBAR.ORGANIZATIONAL_STRUCTURE": "Organizational Structure",
-
   "SIDEBAR.ASSETS": "Assets",
   "SIDEBAR.BRANCH_CAPITAL": "Branch Capital",
   "SIDEBAR.BANK_CAPITAL": "Bank Capital",
   "SIDEBAR.EXPENSES": "Expenses",
   "SIDEBAR.OTHER_ITEMS": "Other Items",
-
   "SIDEBAR.SPECIAL_TRANSACTIONS": "Special Transactions",
   "SIDEBAR.LARGE_CASH_TRANSACTIONS": "Large Cash Transactions",
   "SIDEBAR.INDIVIDUAL_LARGE_CASH": "Individual",
   "SIDEBAR.REPEATED_LARGE_CASH": "Repeated",
   "SIDEBAR.BORDER_PROVINCES": "Border Provinces",
-
   "SIDEBAR.SUSPICIOUS_TRANSACTIONS": "Suspicious Transactions",
   "SIDEBAR.LARGE_SUSPICIOUS_CASH": "Large Suspicious Cash Transactions",
   "SIDEBAR.INDIVIDUAL_SUSPICIOUS": "Individual",
-
   "SIDEBAR.LIABILITIES_AND_PAYMENTS": "Liabilities and Payments",
   "SIDEBAR.SANCTIONS_LIST_COMPLIANCE": "Sanctions List Compliance",
-
   "SIDEBAR.SETTINGS": "Settings",
   "SIDEBAR.SYSTEM_ACCOUNT": "System Account",
   "SIDEBAR.BRANCH": "Branch",
@@ -55,7 +47,6 @@
   "SIDEBAR.BIOMETRIC": "Biometric",
   "SIDEBAR.BACKUP_SYSTEM_DATA": "Backup System Data",
   "SIDEBAR.CURRENCY": "Currency",
-  
   "HOME": {
     "CURRENCY_EXCHANGE": "Currency Exchange",
     "TRANSFER_CURRENCY": "Transfer Currency",
@@ -66,7 +57,6 @@
     "CURRENCY_EXCHANGE_RATES": "Currency Exchange Rates",
     "ADD_NEW_CURRENCY": "Add New Currency",
     "FINANCIAL_SUMMARY": "Financial Summary",
-    
     "TOTAL_CONTRACTS": "Total contracts",
     "TOTAL_AGENCIES": "Total Agencies",
     "TEMPORARY_CUSTOMERS": "Temporary Customers",
@@ -82,7 +72,6 @@
     "EXCHANGE_BALANCE": "Exchange Balance",
     "FINANCE_GROWTH": "Finance Growth",
     "ACCOUNT_SUMMARY": "Account Summary",
-    
     "LOSS(RED)": "Loss (Red)",
     "PROFIT(GREEN)": "Profit (Green)",
     "INCOME(YELLOW)": "Income (Yellow)",
@@ -100,7 +89,7 @@
     "DECEMBER": "December",
     "CUSTOMER_WITHDRAWALS": "Customer Withdrawals",
     "CUSTOMER_DEPOSIT": "Customer Deposits",
-    "RECENT_CUSTOMER_TRANSACTION":"Recent Customer Transaction"
+    "RECENT_CUSTOMER_TRANSACTION": "Recent Customer Transaction"
   },
   "CUSTOMER": {
     "ADD_NEW_CUSTOMER": "Add New Customer",
@@ -132,122 +121,122 @@
     "FULL_ADDRESS": "Full Address",
     "DELETE_CUSTOMER": "Delete Customer",
     "EDIT_CUSTOMER": "Edit Customer",
-    "ACCOUNT_INFORMATION":"Account Information",
-    "CUSTOMER_NAME":"Customer Name",
-    "ACCOUNT_NUMBER":"Account Number",
-    "CUSTOMER":"Customer",
-    "ID_TYPE":"ID Type",
-    "ID_NUMBER":"ID Number",
-    "JOINED":"Joined",
-    "EDIT_INFORMATION":"Edit Information",
-    "DOWNLOAD_EXCEL_FILE":"Download Excel File",
-    "PRINT":"Print",
-    "TRANSACTION":"Transaction",
-    "CUSTOMERS":"Customers"
+    "ACCOUNT_INFORMATION": "Account Information",
+    "CUSTOMER_NAME": "Customer Name",
+    "ACCOUNT_NUMBER": "Account Number",
+    "CUSTOMER": "Customer",
+    "ID_TYPE": "ID Type",
+    "ID_NUMBER": "ID Number",
+    "JOINED": "Joined",
+    "EDIT_INFORMATION": "Edit Information",
+    "DOWNLOAD_EXCEL_FILE": "Download Excel File",
+    "PRINT": "Print",
+    "TRANSACTION": "Transaction",
+    "CUSTOMERS": "Customers"
   },
-  "CURRENCY_CONVERSION":{
-      "CURRENCY_CONVERSION":"Currency Conversion",
-      "ADD_CURRENCY_CONVERSION":"Add Currency Conversion",
-      "VIEW_CURRENCY_CONVERSION":"View Currency Conversion",
-      "EDIT_CURRENCY_CONVERSION":"Edit Currency Conversion",
-      "CURRENCY_CONVERSION_HISTORY":"Currency Conversion History",
-      "NEW_CURRENCY_EXCHANGE":"New Currency Exchange",
-      "TRANSACTION_TYPE":"Transaction Type",
-      "CURRENCY_DEPOSITED":"Currency Deposited",
-      "CURRENCY_WITHDRAWN":"Currency Withdrawn",
-      "DEPOSITED_AMOUNT":"Deposited Amount",
-      "RECEIVED_AMOUNT":"Received Amount",
-      "REAL_TIME_USD_RATE":"Real-time USD Rate"
-    },
-    "SEND_CURRENCY":{
-      "SEND_CURRENCY":"Send Currency",
-      "SENDER_INFORMATION":"Sender Information",
-      "RECIPIENT_INFORMATION":"Recipient Information",
-      "CURRENCY_DEPOSIT":"Currency Deposit",
-      "DEPOSIT_AMOUNT":"Deposit Amount",
-      "CURRENCY_RECEIVE":"Currency Receive",
-      "AMOUNT_RECEIVE":"Amount Receive",
-      "REAL_TIME_USD_RATE":"Real-time USD Rate",
-      "COMMISSION_PAYMENT":"Commission Payment",
-      "COMMISSION_AMOUNT":"Commission Amount",
-      "ONE_WAY":"One Way {{text}}",
-      "TWO_WAY":"Tow Way {{text}}",
-      "TOTAL_PAYMENT":"Total Payment",
-      "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY":"Agency for receiving foreign currency",
-      "INFORMATION_SUCCESSFULLY_REGISTERED":"Information Successfully Registered"
-    },
-    "RECEIVED_CURRENCY":{
-      "RECEIVE_CURRENCY":"Receive Currency",
-      "TRACKING_NUMBER":"Tracking Number",
-      "RECIPIENT_NAME":"Recipient Name",
-      "REMITTANCE_RECEIPT_SUCCESSFULLY_CONFIRMED":"Remittance Receipt Successfully Confirmed"
-    },
-    "ACCOUNT_TO_ACCOUNT_TRANSFER":{
-      "ACCOUNT_TO_ACCOUNT_TRANSFER":"Account to Account Transfer",
-      "SENDER_INFORMATION":"Sender Information",
-      "CUSTOMER_NAME":"Customer Name",
-      "ACCOUNT_NUMBER":"Account Number",
-      "BRANCH":"Branch",
-      "RECIPIENT_INFORMATION":"Recipient Information",
-      "DEPOSIT_CURRENCY":"Deposit Currency",
-      "DEPOSIT_AMOUNT":"Deposit Amount"
-    },
-    "DEPOSIT_TO_BANK":{
-      "CASH_DEPOSIT_TO_BANK_ACCOUNT":"Cash Deposit to Bank Account",
-      "ACCOUNT_HOLDER_INFORMATION":"Account Holder Information",
-      "CUSTOMER_NAME":"Customer Name",
-      "ACCOUNT_NUMBER":"Account Number",
-      "BRANCH":"Branch",
-      "DEPOSIT_CURRENCY":"Deposit Currency",
-      "DEPOSIT_AMOUNT":"Deposit Amount"
-    },
-    "CUSTOMER_TRANSACTION_HISTORY":{
-      "VIEW_ACCOUNT_INFORMATION":"View Account Information",
-      "TRANSACTION_HISTORY_DETAILS":"Transaction History Details",
-      "SENDER_INFORMATION": "Sender information",
-      "DATE": "Date",
-      "TIME": "Time",
-      "CUSTOMER_NAME": "Customer name",
-      "PERMANENT_CUSTOMER": "Permanent Customer",
-      "RECIPIENT_INFORMATION": "Recipient information",
-      "TEMPORARY_CUSTOMER": "Temporary Customer",
-      "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY": "Agency for receiving foreign currency",
-      "DEPOSIT_AMOUNT": "Deposit amount",
-      "CURRENCY_DEPOSIT": "Currency deposit",
-      "REAL_TIME_USD_RATE": "Real-time USD Rate",
-      "AMOUNT_RECEIVED": "Amount received",
-      "CURRENCY_RECEIVE": "Currency Receive",
-      "COMMISSION_PAYMENT": "Commission payment",
-      "COMMISSION_AMOUNT": "Commission amount",
-      "TWO_WAY": "Two-way (10%)",
-      "ONE_WAY": "One-way (3%)",
-      "TOTAL_PAYMENT": "Total payment",
-      "EDIT_INFORMATION": "Edit information",
-      "CANCEL_TRANSACTION": "Cancel Transaction"
-    },
-    "FINANCIAL_REPORTS":{
-      "FINANCIAL_REPORT":"Financial Report",
-      "RECENT_TRANSACTION":"Recent Transaction"
-    },
-    "BRANCH_INDICATOR_REPORT":{
-      "BRANCH_INDICATOR_REPORT":"Branch Indicator Report"
-    },
-    "PROFIT_LOSS":{
-      "PROFIT_AND_LOSS_REPORT":"Profit and Loss Report"
-    },
-    "CURRENCY_EXCHANGE_REPORT":{
-      "CURRENCY_EXCHANGE_REPORT":"Currency Exchange Report"
-    },
-    "CURRENCY_SENDING_REPORT":{
-      "CURRENCY_SENDING_REPORT":"Currency Sending Report"
-    },
-    "DELETED_TRANSACTIONS":{
-      "DELETED_TRANSACTIONS":"Deleted Transactions"
-    },
-    "TOTAL_TRANSFERS_REPORT":{
-      "TOTAL_TRANSFERS_REPORT":"Total Transfers Report"
-    },
-    "EMPLOYEES": {
+  "CURRENCY_CONVERSION": {
+    "CURRENCY_CONVERSION": "Currency Conversion",
+    "ADD_CURRENCY_CONVERSION": "Add Currency Conversion",
+    "VIEW_CURRENCY_CONVERSION": "View Currency Conversion",
+    "EDIT_CURRENCY_CONVERSION": "Edit Currency Conversion",
+    "CURRENCY_CONVERSION_HISTORY": "Currency Conversion History",
+    "NEW_CURRENCY_EXCHANGE": "New Currency Exchange",
+    "TRANSACTION_TYPE": "Transaction Type",
+    "CURRENCY_DEPOSITED": "Currency Deposited",
+    "CURRENCY_WITHDRAWN": "Currency Withdrawn",
+    "DEPOSITED_AMOUNT": "Deposited Amount",
+    "RECEIVED_AMOUNT": "Received Amount",
+    "REAL_TIME_USD_RATE": "Real-time USD Rate"
+  },
+  "SEND_CURRENCY": {
+    "SEND_CURRENCY": "Send Currency",
+    "SENDER_INFORMATION": "Sender Information",
+    "RECIPIENT_INFORMATION": "Recipient Information",
+    "CURRENCY_DEPOSIT": "Currency Deposit",
+    "DEPOSIT_AMOUNT": "Deposit Amount",
+    "CURRENCY_RECEIVE": "Currency Receive",
+    "AMOUNT_RECEIVE": "Amount Receive",
+    "REAL_TIME_USD_RATE": "Real-time USD Rate",
+    "COMMISSION_PAYMENT": "Commission Payment",
+    "COMMISSION_AMOUNT": "Commission Amount",
+    "ONE_WAY": "One Way {{text}}",
+    "TWO_WAY": "Tow Way {{text}}",
+    "TOTAL_PAYMENT": "Total Payment",
+    "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY": "Agency for receiving foreign currency",
+    "INFORMATION_SUCCESSFULLY_REGISTERED": "Information Successfully Registered"
+  },
+  "RECEIVED_CURRENCY": {
+    "RECEIVE_CURRENCY": "Receive Currency",
+    "TRACKING_NUMBER": "Tracking Number",
+    "RECIPIENT_NAME": "Recipient Name",
+    "REMITTANCE_RECEIPT_SUCCESSFULLY_CONFIRMED": "Remittance Receipt Successfully Confirmed"
+  },
+  "ACCOUNT_TO_ACCOUNT_TRANSFER": {
+    "ACCOUNT_TO_ACCOUNT_TRANSFER": "Account to Account Transfer",
+    "SENDER_INFORMATION": "Sender Information",
+    "CUSTOMER_NAME": "Customer Name",
+    "ACCOUNT_NUMBER": "Account Number",
+    "BRANCH": "Branch",
+    "RECIPIENT_INFORMATION": "Recipient Information",
+    "DEPOSIT_CURRENCY": "Deposit Currency",
+    "DEPOSIT_AMOUNT": "Deposit Amount"
+  },
+  "DEPOSIT_TO_BANK": {
+    "CASH_DEPOSIT_TO_BANK_ACCOUNT": "Cash Deposit to Bank Account",
+    "ACCOUNT_HOLDER_INFORMATION": "Account Holder Information",
+    "CUSTOMER_NAME": "Customer Name",
+    "ACCOUNT_NUMBER": "Account Number",
+    "BRANCH": "Branch",
+    "DEPOSIT_CURRENCY": "Deposit Currency",
+    "DEPOSIT_AMOUNT": "Deposit Amount"
+  },
+  "CUSTOMER_TRANSACTION_HISTORY": {
+    "VIEW_ACCOUNT_INFORMATION": "View Account Information",
+    "TRANSACTION_HISTORY_DETAILS": "Transaction History Details",
+    "SENDER_INFORMATION": "Sender information",
+    "DATE": "Date",
+    "TIME": "Time",
+    "CUSTOMER_NAME": "Customer name",
+    "PERMANENT_CUSTOMER": "Permanent Customer",
+    "RECIPIENT_INFORMATION": "Recipient information",
+    "TEMPORARY_CUSTOMER": "Temporary Customer",
+    "AGENCY_FOR_RECEIVING_FOREIGN_CURRENCY": "Agency for receiving foreign currency",
+    "DEPOSIT_AMOUNT": "Deposit amount",
+    "CURRENCY_DEPOSIT": "Currency deposit",
+    "REAL_TIME_USD_RATE": "Real-time USD Rate",
+    "AMOUNT_RECEIVED": "Amount received",
+    "CURRENCY_RECEIVE": "Currency Receive",
+    "COMMISSION_PAYMENT": "Commission payment",
+    "COMMISSION_AMOUNT": "Commission amount",
+    "TWO_WAY": "Two-way (10%)",
+    "ONE_WAY": "One-way (3%)",
+    "TOTAL_PAYMENT": "Total payment",
+    "EDIT_INFORMATION": "Edit information",
+    "CANCEL_TRANSACTION": "Cancel Transaction"
+  },
+  "FINANCIAL_REPORTS": {
+    "FINANCIAL_REPORT": "Financial Report",
+    "RECENT_TRANSACTION": "Recent Transaction"
+  },
+  "BRANCH_INDICATOR_REPORT": {
+    "BRANCH_INDICATOR_REPORT": "Branch Indicator Report"
+  },
+  "PROFIT_LOSS": {
+    "PROFIT_AND_LOSS_REPORT": "Profit and Loss Report"
+  },
+  "CURRENCY_EXCHANGE_REPORT": {
+    "CURRENCY_EXCHANGE_REPORT": "Currency Exchange Report"
+  },
+  "CURRENCY_SENDING_REPORT": {
+    "CURRENCY_SENDING_REPORT": "Currency Sending Report"
+  },
+  "DELETED_TRANSACTIONS": {
+    "DELETED_TRANSACTIONS": "Deleted Transactions"
+  },
+  "TOTAL_TRANSFERS_REPORT": {
+    "TOTAL_TRANSFERS_REPORT": "Total Transfers Report"
+  },
+  "EMPLOYEES": {
     "EMPLOYEES": "Employees",
     "ADD_NEW_EMPLOYEE": "Add New Employee",
     "DATE_OF_EMPLOYMENT": "Date of employment",
@@ -292,32 +281,32 @@
     "BACK": "Back",
     "SELECT": "Select"
   },
-  "ORGANIZATIONAL_STRUCTURE":{
-    "ORGANIZATIONAL_STRUCTURE":"Organization Structure"
+  "ORGANIZATIONAL_STRUCTURE": {
+    "ORGANIZATIONAL_STRUCTURE": "Organization Structure"
   },
-  "BANK_CAPITAL":{
-    "BANK_CAPITAL":"Bank Capital",
-    "ADD_BANK_CAPITAL":"Create New Bank Capital",
-    "EDIT_BANK_CAPITAL":"Edit Bank Capital",
-    "BANK":"Bank",
-    "ACCOUNT":"Account",
-    "AMOUNT":"Amount",
-    "BRANCH":"Branch",
-    "CURRENCY":"Currency",
-    "DATE":"Date"
+  "BANK_CAPITAL": {
+    "BANK_CAPITAL": "Bank Capital",
+    "ADD_BANK_CAPITAL": "Create New Bank Capital",
+    "EDIT_BANK_CAPITAL": "Edit Bank Capital",
+    "BANK": "Bank",
+    "ACCOUNT": "Account",
+    "AMOUNT": "Amount",
+    "BRANCH": "Branch",
+    "CURRENCY": "Currency",
+    "DATE": "Date"
   },
-  "BRANCH_CAPITAL":{
-    "BRANCH_CAPITAL":"Branch Capital",
-    "ADD_BRANCH_CAPITAL":"Add Branch Capital",
-    "EDIT_BRANCH_CAPITAL":"Edit Branch Capital",
-    "TRANSACTION_TYPE":"Transaction Type",
-    "DATE":"Date",
-    "AMOUNT":"Amount",
-    "CURRENCY":"Currency",
-    "SOURCE":"Source",
-    "PURPOSE":"Purpose"
+  "BRANCH_CAPITAL": {
+    "BRANCH_CAPITAL": "Branch Capital",
+    "ADD_BRANCH_CAPITAL": "Add Branch Capital",
+    "EDIT_BRANCH_CAPITAL": "Edit Branch Capital",
+    "TRANSACTION_TYPE": "Transaction Type",
+    "DATE": "Date",
+    "AMOUNT": "Amount",
+    "CURRENCY": "Currency",
+    "SOURCE": "Source",
+    "PURPOSE": "Purpose"
   },
-  "EXPENSES":{
+  "EXPENSES": {
     "EXPENSE": "Expense",
     "ADD_NEW_CONSUMPTION": "Add new consumption",
     "CATEGORY": "Category",
@@ -340,11 +329,11 @@
     "ADMINISTRATIVE": "Administrative",
     "COMMUNICATION": "Communication",
     "INSURANCE": "Insurance",
-    "PURCHASE_AMOUNT":"Purchase Amount",
-    "ASSET_DESCRIPTION":"Asset Description"
+    "PURCHASE_AMOUNT": "Purchase Amount",
+    "ASSET_DESCRIPTION": "Asset Description"
   },
-  "OTHER_ITEMS":{
-    "OTHER_ITEMS":"Other Items",
+  "OTHER_ITEMS": {
+    "OTHER_ITEMS": "Other Items",
     "CATEGORY": "Category",
     "STATUS": "Status",
     "DATE": "Date",
@@ -365,11 +354,11 @@
     "ADMINISTRATIVE": "Administrative",
     "COMMUNICATION": "Communication",
     "INSURANCE": "Insurance",
-    "PURCHASE_AMOUNT":"Purchase Amount",
-    "ASSET_DESCRIPTION":"Asset Description",
-    "DETAILS":"Details"
+    "PURCHASE_AMOUNT": "Purchase Amount",
+    "ASSET_DESCRIPTION": "Asset Description",
+    "DETAILS": "Details"
   },
-  "LIABILITIES":{
+  "LIABILITIES": {
     "LIABILITIES_AND_PAYMENTS": "Liabilities and Payments",
     "ADD_NEW_DOCUMENT": "Add New Document",
     "STATUS": "Status",
@@ -391,14 +380,124 @@
     "PAYMENT_METHOD": "Payment Method",
     "ASSET_TYPE": "Asset Type"
   },
-  "SYSTEM_ACCOUNT":{
-    "SETTINGS_SYSTEM_ACCOUNT":"Settings - System Account",
-    "ADD_NEW_ACCOUNT":"Add New Account",
-    "BRANCH":"Branch",
+  "SYSTEM_ACCOUNT": {
+    "SETTINGS_SYSTEM_ACCOUNT": "Settings - System Account",
+    "ADD_NEW_ACCOUNT": "Add New Account",
+    "BRANCH": "Branch",
+    "ACCOUNT_NUMBER": "Account Number",
+    "ACCOUNT_NAME": "Account Name",
+    "ACCOUNT_TYPE": "Account Type",
+    "CURRENCY": "Currency"
+  },
+  "BRANCH": {
+    "SETTINGS_BRANCH": "Settings - Branch",
+    "ADD_NEW_BRANCH": "Add New Branch",
+    "DATE": "Date",
+    "CURRENCY": "Currency",
+    "PHONE_NUMBER": "Phone Number",
+    "ADDRESS": "Address",
+    "TYPE": "Type",
+    "MANAGER": "Manager",
+    "BRANCH_NAME": "Branch Name",
+    "BRANCH_CODE": "Branch Code",
+    "BRANCH_TYPE": "Branch Type",
+    "PROVINCE": "Province",
+    "BRANCH_CODE_LABEL": "Branch Code",
+    "BRANCH_MANAGER_NAME": "Branch Manager Name",
+    "BRANCH_NAME_DARI": "Branch Name (Dari)",
+    "BRANCH_NAME_ENGLISH": "Branch Name (English)",
+    "ADDRESS_OPTIONAL": "Address (optional)",
+    "EMAIL_OPTIONAL": "Email (optional)",
+    "PHONE_NUMBER_LABEL": "Phone Number"
+  },
+  "BIOMETRIC": {
+    "SETTINGS_BIOMETRIC": "Setting - Biometric",
+    "ACTIVE_BIOMETRIC_SYSTEM": "Active Biometric System",
+    "DEVICE_STATUS": "Device Status",
+    "DEVICE_NOT_CONNECTED": "Device Not Connected",
+    "DEVICE_DEVICE": "Device Device",
+    "CHECK_DEVICE": "Check Device"
+  },
+  "BACKUP": {
+    "SETTINGS_BACKUP_SYSTEM_DATA": "Settings - Backup System Data",
+    "DATA_BACKUP": "Data Backup",
+    "DATABASE_BACKUP": "Database Backup",
+    "BACKUP_SYSTEM_INFORMATION": "Backup System Information",
+    "LAST_CHANGE": "Last Change"
+  },
+  "CURRENCY": {
+    "SETTINGS_CURRENCY": "Settings - Currency",
+    "ADD_NEW_CURRENCY": "Add New Currency",
+    "ROW": "Row",
+    "CURRENCY": "Currency",
+    "ABBREVIATION": "Abbreviation",
+    "RATE": "Rate",
+    "ENGLISH": "English",
+    "DARY": "Dari",
+    "PASHTO": "Pashto",
+    "LARGE_CASH_TRANSACTION": "Large Cash Transaction"
+  },
+  "USER": {
+    "SETTINGS_USER": "Settings - User",
+    "ADD_NEW_USER": "Add New User",
+    "EMAIL": "Email",
+    "BRANCH": "Branch",
+    "CURRENCY": "Currency",
+    "PROFILE_NAME": "Profile Name",
+    "ROW": "Row",
+    "FATHER_NAME": "Father Name",
+    "USER_NAME_INPUT": "User Name",
+    "PROFILE_NAME_INPUT": "Profile Name",
+    "IDENTITY_DOCUMENT_NUMBER": "Identity Document Number",
+    "IDENTITY_DOCUMENT_TYPE": "Identity Document Type",
+    "GENDER": "Gender",
+    "PASSWORD": "Password",
+    "PLACE_OF_BIRTH": "Place of Birth",
+    "DATE_OF_BIRTH": "Date of Birth",
+    "ADDRESS_OPTIONAL": "Address (optional)",
+    "NATIONALITY": "Nationality",
+    "PHONE_NUMBER": "Phone Number",
+    "UPLOAD_PHOTO": "Upload Photo",
+    "PROFILE_PHOTO": "Profile Photo",
+    "BACK": "Back",
+    "NEXT_STEP": "Next Step",
+    "PERMITTED_TRANSACTION_AMOUNT": "Permitted Transaction Amount",
+    "USER_NAME": "User Name",
+    "BIOMETRIC": "Biometric",
+    "REPORT": "Report",
+    "FULL_EXCHANGE_REPORT": "Full Exchange Report",
+    "TREASURY": "Treasury",
+    "STATISTICS": "Statistics",
+    "ACCOUNT_STATEMENT": "Account Statement",
+    "APPROVER": "Approver",
+    "PROFIT_LOSS": "Profit / Loss",
+    "PERMISSIONS": "Permissions",
+    "SERVICES": "Services",
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "CREATE": "Create",
+    "VIEW": "View",
+    "CUSTOMER": "Customer",
+    "CURRENCY_EXCHANGE": "Currency Exchange",
+    "CURRENCY_DEPOSIT": "Currency Deposit",
+    "ACCOUNT_TO_ACCOUNT_TRANSFER": "Account-to-Account Transfer",
+    "EXPENSES": "Expenses",
+    "DEPOSITS": "Deposits",
+    "SETTLEMENT": "Settlement",
+    "DEBT": "Debt",
+    "CURRENT_ASSETS": "Current Assets",
+    "FIXED_ASSETS": "Fixed Assets",
+    "BUSINESS_DAY": "Business Day",
+    "SYSTEM_ACCOUNT": "System Account",
+    "SYSTEM_INFO": "System Info",
+    "BRANCHES": "Branches",
+    "USER": "User",
+    "BACKUP_SYSTEM_DATA": "Backup System Data",
+    "USER_PERMISSIONS": "User Permissions",
+    "HUMAN_RESOURCES": "Human Resources",
     "ACCOUNT_NUMBER":"Account Number",
     "ACCOUNT_NAME":"Account Name",
-    "ACCOUNT_TYPE":"Account Type",
-    "CURRENCY":"Currency"
+    "USER_INFORMATION":"User Information"
   },
   "COMMON": {
     "TOTAL": "Total",
@@ -414,17 +513,17 @@
     "DELETE": "Delete",
     "EDIT": "Edit",
     "ARE_YOU_SURE_ABOUT_REMOVING": "Are You Sure Removing",
-    "ARE_YOU_SURE_YOU_WANT_TO_DELETE":"Are You Sure You Want to Delete?",
+    "ARE_YOU_SURE_YOU_WANT_TO_DELETE": "Are You Sure You Want to Delete?",
     "YES_DELETE": "Yes, Delete",
     "THE_REMOVAL_OF_SUCCESSFULLY": "The removal of {{item}} was successfully.",
-    "THE_DELETION_IS_SUCCESSFUL":"The Deletion is Successful",
-    "SAVE_AS_PDF":"Save as PDF",
-    "SAVE_AS_IMAGE":"Save Image",
-    "CONFIRM_RECEIPT":"Confirm Receipt",
-    "PRINT_INFORMATION":"Print Information",
-    "DESCRIPTION_OPTIONAL":"Description (Optional)",
-    "CONFIRM_AND_TRANSFER":"Confirm & Transfer",
-    "DOWNLOAD_EXCEL_FILE":"Download Excel File",
+    "THE_DELETION_IS_SUCCESSFUL": "The Deletion is Successful",
+    "SAVE_AS_PDF": "Save as PDF",
+    "SAVE_AS_IMAGE": "Save Image",
+    "CONFIRM_RECEIPT": "Confirm Receipt",
+    "PRINT_INFORMATION": "Print Information",
+    "DESCRIPTION_OPTIONAL": "Description (Optional)",
+    "CONFIRM_AND_TRANSFER": "Confirm & Transfer",
+    "DOWNLOAD_EXCEL_FILE": "Download Excel File",
     "UPLOAD_DOCUMENTS": "Upload documents",
     "UPLOAD_FORMAT_INFO": "JPEG, PNG, PDF, and MP4 formats, up to 50MB",
     "SELECT_FILE": "Select file",
@@ -433,6 +532,6 @@
     "UPLOADING": "Uploading...",
     "FILE_NAME": "File name",
     "FILE_SIZE": "File size",
-    "PERSONAL_NUMBER":"Personal Number"
+    "PERSONAL_NUMBER": "Personal Number"
   }
 }

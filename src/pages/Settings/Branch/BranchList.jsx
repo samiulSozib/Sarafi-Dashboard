@@ -1,0 +1,308 @@
+import React, { useState } from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableRow,
+} from "../../../components/ui/table";
+import Badge from "../../../components/ui/badge/Badge";
+import Pagination from "../../../components/pagination/pagination";
+import { useTranslation } from "react-i18next";
+import { checkRtl } from "../../../utils/utils";
+import {
+  BlueSignal,
+  CalenderIcon,
+  Delete,
+  Edit,
+  Search,
+  SearchIcon,
+  View,
+} from "../../../icons";
+import Button from "../../../components/ui/button/Button";
+import {
+  IconButton,
+  Menu,
+  MenuHandler,
+  MenuItem,
+  MenuList,
+} from "@material-tailwind/react";
+import { CiMenuKebab } from "react-icons/ci";
+import { useNavigate } from "react-router";
+import DeleteAlert from "./sweetalert/DeleteAlert";
+import FloatingDropdown from "../../../components/input/FloatingDropdown";
+import FloatingInput from "../../../components/input/FloatingInput";
+import { AddEditBranch } from "./AddEditBranch";
+
+export const BranchList = () => {
+  const branchList = [
+    {
+      date: "2025-06-20",
+      currency: "USD",
+      phoneNumber: "+1 202-555-0171",
+      address: "123 Main St, Washington, DC",
+      type: "Head Office",
+      manager: "John Smith",
+      branchName: "Main Branch",
+      branchCode: "MB001",
+      row: 1,
+    },
+    {
+      date: "2025-06-18",
+      currency: "EUR",
+      phoneNumber: "+49 30 123456",
+      address: "45 Berlin Rd, Berlin, Germany",
+      type: "Regional Office",
+      manager: "Anna Müller",
+      branchName: "Berlin Branch",
+      branchCode: "BB002",
+      row: 2,
+    },
+    {
+      date: "2025-06-15",
+      currency: "AFN",
+      phoneNumber: "+93 700 123 456",
+      address: "Street 5, Kabul, Afghanistan",
+      type: "Sub Branch",
+      manager: "Ahmad Zahir",
+      branchName: "Kabul Branch",
+      branchCode: "KB003",
+      row: 3,
+    },
+  ];
+
+  const { t, i18n } = useTranslation();
+  const isRTL = checkRtl(i18n.language);
+  const navigate = useNavigate();
+  const [isEditing, setIsEditing] = useState(false);
+  const [isShowing, setIsShowing] = useState(false);
+  const [confirmationDelete, setConfirmationDelete] = useState(false);
+  const [
+    isAddEditBranchCapitalDialogOpen,
+    setIsAddEditBranchCapitalDialogOpen,
+  ] = useState(false);
+
+  const handleDelete = () => {
+    setConfirmationDelete(true);
+  };
+
+  return (
+    <div className='overflow-hidden pb-3 pt-4 dark:border-gray-800 dark:bg-white/[0.03] sm:px-6"'>
+      <div className="flex flex-row justify-end mb-3">
+        <Button
+          onClick={() => setIsAddEditBranchCapitalDialogOpen(true)}
+          className="bg-[#00AB55] text-white"
+          startIcon={
+            <svg
+              width="19"
+              height="18"
+              viewBox="0 0 19 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.49999 3.1875C9.81065 3.1875 10.0625 3.43934 10.0625 3.75V8.43749H14.75C15.0607 8.43749 15.3125 8.68933 15.3125 8.99999C15.3125 9.31065 15.0607 9.56249 14.75 9.56249H10.0625V14.25C10.0625 14.5607 9.81065 14.8125 9.49999 14.8125C9.18933 14.8125 8.93749 14.5607 8.93749 14.25V9.56249H4.25C3.93934 9.56249 3.6875 9.31065 3.6875 8.99999C3.6875 8.68933 3.93934 8.43749 4.25 8.43749H8.93749V3.75C8.93749 3.43934 9.18933 3.1875 9.49999 3.1875Z"
+                fill="white"
+              />
+            </svg>
+          }
+        >
+          {t("BRANCH.ADD_NEW_BRANCH")}
+        </Button>
+      </div>
+
+      <div className="border rounded-lg">
+        <div className="flex flex-row gap-2 items-center bg-[#F4F6F8] p-4 rounded-md py-4">
+          <BlueSignal className="w-5 h-5" />
+          <span className="font-semibold text-[18px] leading-8">
+            {t("BRANCH.SETTINGS_BRANCH")}
+          </span>
+        </div>
+
+        <div className="bg-white col-span-12 grid grid-cols-12 gap-3 md:gap-6 p-2 mb-2">
+          <div className="col-span-12 md:col-span-3">
+            <div className="relative">
+              <FloatingInput
+                label={t("BRANCH.BRANCH_CODE")}
+                rightIcon={<Search />}
+              />
+            </div>
+          </div>
+
+          <div className="col-span-12 md:col-span-3">
+            <div className="relative">
+              <FloatingInput
+                label={t("BRANCH.BRANCH_NAME")}
+                rightIcon={<Search />}
+              />
+            </div>
+          </div>
+
+          <div className="col-span-12 md:col-span-3">
+            <div className="relative">
+              <FloatingInput
+                label={t("BRANCH.MANAGER")}
+                rightIcon={<Search />}
+              />
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-3">
+            <div className="relative">
+              <FloatingInput
+                label={t("BRANCH.DATE")}
+                rightIcon={<CalenderIcon />}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-full overflow-x-auto p-2">
+          <Table>
+            {/* Table Header */}
+            <TableHeader className="bg-[#F4F6F8] border-b border-gray-100 dark:border-white/[0.05]">
+              <TableRow>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Branch Code
+                </TableCell>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Branch Name
+                </TableCell>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Manager
+                </TableCell>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Type
+                </TableCell>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Address
+                </TableCell>
+
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Phone Number
+                </TableCell>
+
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Currency
+                </TableCell>
+
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Date
+                </TableCell>
+
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Actions
+                </TableCell>
+              </TableRow>
+            </TableHeader>
+
+            {/* Table Body */}
+            <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
+              {branchList.map((record) => (
+                <TableRow key={record.id}>
+                  <TableCell className="px-5 py-4 sm:px-6 text-start text-theme-sm dark:text-white/90">
+                    {record.branchCode}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                    {record.branchName}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                    {record.manager}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                    {record.type}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-start">
+                    {record.address}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-start">
+                    {record.phoneNumber}
+                  </TableCell>
+
+                  <TableCell className="px-4 py-3 text-start">
+                    {record.currency}
+                  </TableCell>
+
+                  <TableCell className="px-4 py-3 text-start">
+                    {record.date}
+                  </TableCell>
+
+                  <TableCell className="px-4 py-3 text-start">
+                    <Menu>
+                      <MenuHandler>
+                        <IconButton variant="text" className="p-1">
+                          <CiMenuKebab className="w-5 h-5 text-gray-500" />
+                        </IconButton>
+                      </MenuHandler>
+                      <MenuList className="min-w-[120px] flex flex-col gap-3 text-[16px font-semibold]">
+                        <MenuItem className="flex items-center gap-4">
+                          <View className="w-5 h-5" />
+                          <span>{t("COMMON.VIEW")}</span>
+                        </MenuItem>
+                        <MenuItem className="flex items-center gap-4">
+                          <Edit className="w-5 h-5" />
+                          <span>{t("COMMON.EDIT")}</span>
+                        </MenuItem>
+                        <MenuItem
+                          onClick={() => handleDelete()}
+                          className="flex items-center gap-4 text-red-500"
+                        >
+                          <Delete className="w-5 h-5" />
+                          <span>{t("COMMON.DELETE")}</span>
+                        </MenuItem>
+                      </MenuList>
+                    </Menu>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <Pagination currentPage={1} totalPages={10} onPageChange={() => {}} />
+        </div>
+      </div>
+
+      {isAddEditBranchCapitalDialogOpen && (
+        <AddEditBranch
+          isOpen={isAddEditBranchCapitalDialogOpen}
+          onClose={() => {
+            setIsAddEditBranchCapitalDialogOpen(false),
+              setIsEditing(false),
+              setIsShowing(false);
+          }}
+        />
+      )}
+
+      {confirmationDelete && (
+        <DeleteAlert onClose={() => setConfirmationDelete(false)} />
+      )}
+    </div>
+  );
+};
