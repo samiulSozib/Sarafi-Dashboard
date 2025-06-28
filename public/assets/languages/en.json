@@ -495,9 +495,9 @@
     "BACKUP_SYSTEM_DATA": "Backup System Data",
     "USER_PERMISSIONS": "User Permissions",
     "HUMAN_RESOURCES": "Human Resources",
-    "ACCOUNT_NUMBER":"Account Number",
-    "ACCOUNT_NAME":"Account Name",
-    "USER_INFORMATION":"User Information"
+    "ACCOUNT_NUMBER": "Account Number",
+    "ACCOUNT_NAME": "Account Name",
+    "USER_INFORMATION": "User Information"
   },
   "COMMON": {
     "TOTAL": "Total",
