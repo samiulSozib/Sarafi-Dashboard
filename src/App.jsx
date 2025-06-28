@@ -41,12 +41,12 @@ import { Expenses } from "./pages/Assets/Expenses/Expense";
 import { OthersItem } from "./pages/Assets/OtherItems/OtherItems";
 import { Liabilities } from "./pages/Liabilities/Liabilities";
 import { SystemAccount } from "./pages/Settings/SystemAccount/SystemAccount";
-import { Branch } from "./pages/Settings/Branch/bRANCH";
 import { Biometric } from "./pages/Settings/Biometric/Biometric";
 import { Backup } from "./pages/Settings/Backup/Backup";
 import { Currency } from "./pages/Settings/Currency/Currency";
 import { User } from "./pages/Settings/User/User";
 import {UserPermissionForm} from "./pages/Settings/User/UserPermissionForm";
+import { BranchList } from "./pages/Settings/Branch/BranchList";
 
 export default function App() {
   return (
@@ -96,7 +96,7 @@ export default function App() {
 
 
             <Route index path="/settings/system-account" element={<SystemAccount/>}/>
-            <Route index path="/settings/branch" element={<Branch/>}/>
+            <Route index path="/settings/branch" element={<BranchList/>}/>
             <Route index path="/settings/biometric" element={<Biometric/>}/>
             <Route index path="/settings/backup-data" element={<Backup/>}/>
             <Route index path="/settings/currency" element={<Currency/>}/>
